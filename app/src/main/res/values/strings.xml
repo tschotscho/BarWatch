@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BarWatch</string>
+    <string name="foo_string">Foooooooo</string>
 </resources>
