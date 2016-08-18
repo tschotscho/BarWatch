@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">BarWatch</string>
-    <string name="foo_string">Foooooooo</string>
+    <string name="drawer_opened">Drawer Opened</string>
+    <string name="drawer_closed">Drawer Closed</string>
 </resources>
