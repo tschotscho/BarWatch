@@ -1,15 +1,21 @@
 package com.example.hannes.barwatch;
 
 import android.support.v4.app.Fragment;
-import android.support.v4.app.ListFragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.MenuItem;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import Adapter.WeekPagerAdapter;
+import Fragments.Friday;
+import Fragments.Monday;
+import Fragments.Saturday;
+import Fragments.Sunday;
+import Fragments.Thursday;
+import Fragments.Tuesday;
+import Fragments.Wednesday;
 
 public class MainActivity extends AppCompatActivity {
     List<Fragment> listWeek;
