@@ -13,27 +13,35 @@
 
     <TextView
         android:id="@+id/heaeder"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="BarWatch"
-        android:textColor="#000"
-        android:textSize="26dp" />
+        android:textColor="#fff"
+        android:textSize="26dp"
+        android:background="@color/material_blue_grey_800"
+        android:paddingTop="5dp"
+        android:paddingLeft="10dp"/>
 
     <TextView
         android:id="@+id/sub_heaeder"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Regensburg"
-        android:textColor="#444"
-        android:textSize="16dp" />
+        android:textColor="#fff"
+        android:textSize="16dp"
+        android:background="@color/material_blue_grey_800"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"/>
 
     <Spinner
         android:layout_marginTop="10dp"
         android:id="@+id/spinner"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Wähle Bar"
-        android:textColorHint="#444" />
+        android:textColorHint="#DDD"
+        android:background="#888"
+        />
 
 
 </LinearLayout>
