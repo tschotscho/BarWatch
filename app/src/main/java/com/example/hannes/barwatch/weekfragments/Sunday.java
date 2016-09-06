@@ -1,4 +1,4 @@
-package weekfragments;
+package com.example.hannes.barwatch.weekfragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,12 +12,12 @@ import com.example.hannes.barwatch.R;
 /**
  * Created by Christopher on 11.08.2016.
  */
-public class Saturday extends Fragment {
+public class Sunday extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.saturday_layout, container, false);
+        View v = inflater.inflate(R.layout.sunday_layout, container, false);
 
         return v;
     }

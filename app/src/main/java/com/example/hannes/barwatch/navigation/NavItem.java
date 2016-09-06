@@ -1,4 +1,4 @@
-package com.example.hannes.barwatch;
+package com.example.hannes.barwatch.navigation;
 
 /**
  * Created by Christopher on 18.08.2016.

@@ -1,4 +1,4 @@
-package weekfragments;
+package com.example.hannes.barwatch.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,15 +10,15 @@ import android.view.ViewGroup;
 import com.example.hannes.barwatch.R;
 
 /**
- * Created by Christopher on 11.08.2016.
+ * Created by Christopher on 18.08.2016.
  */
-public class Tuesday extends Fragment {
+public class MyFavourite extends Fragment {
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.tuesday_layout, container, false);
-
+        View v = inflater.inflate(R.layout.fragment_favourites, container, false);
         return v;
     }
 }

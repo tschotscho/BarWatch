@@ -1,4 +1,4 @@
-package Adapter;
+package com.example.hannes.barwatch.adapter;
 
 import android.content.Context;
 import android.view.View;
@@ -7,7 +7,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.hannes.barwatch.NavItem;
+import com.example.hannes.barwatch.navigation.NavItem;
 import com.example.hannes.barwatch.R;
 
 import java.util.List;

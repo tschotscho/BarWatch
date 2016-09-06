@@ -1,4 +1,4 @@
-package Adapter;
+package com.example.hannes.barwatch.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

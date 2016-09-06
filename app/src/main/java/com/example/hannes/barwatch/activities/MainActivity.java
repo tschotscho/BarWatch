@@ -1,4 +1,4 @@
-package com.example.hannes.barwatch;
+package com.example.hannes.barwatch.activities;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -16,10 +16,12 @@ import android.widget.RelativeLayout;
 import java.util.ArrayList;
 import java.util.List;
 
-import Adapter.NavListAdapter;
-import Fragments.Favourites;
-import Fragments.Home;
-import Fragments.Location;
+import com.example.hannes.barwatch.fragments.MyFavourite;
+import com.example.hannes.barwatch.fragments.MyLocation;
+import com.example.hannes.barwatch.navigation.NavItem;
+import com.example.hannes.barwatch.R;
+import com.example.hannes.barwatch.adapter.NavListAdapter;
+import com.example.hannes.barwatch.fragments.MyHome;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -45,8 +47,8 @@ public class MainActivity extends AppCompatActivity {
 
         listNavItems = new ArrayList<NavItem>();
         listNavItems.add(new NavItem("Die besten Angebote", "Happy Hour", R.drawable.beer_icon));
-        listNavItems.add(new NavItem("Nutze die Karte", "Location", R.drawable.ic_location));
-        listNavItems.add(new NavItem("Deine Best of", "Favourites", R.drawable.ic_stern));
+        listNavItems.add(new NavItem("Nutze die Karte", "MyLocation", R.drawable.ic_location));
+        listNavItems.add(new NavItem("Deine Best of", "MyFavourite", R.drawable.ic_stern));
 
         NavListAdapter navListAdapter = new NavListAdapter(getApplicationContext(),
                 R.layout.item_nav_list, listNavItems);
@@ -54,9 +56,9 @@ public class MainActivity extends AppCompatActivity {
         lvNav.setAdapter(navListAdapter);
 
         listFragments = new ArrayList<Fragment>();
-        listFragments.add(new Home());
-        listFragments.add(new Location());
-        listFragments.add(new Favourites());
+        listFragments.add(new MyHome());
+        listFragments.add(new MyLocation());
+        listFragments.add(new MyFavourite());
 
         //load first fragment as default:
         FragmentManager fragmentManager = getSupportFragmentManager();
