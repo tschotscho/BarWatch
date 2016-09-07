@@ -10,8 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import android.location.LocationManager;
-
 import com.example.hannes.barwatch.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -32,8 +30,6 @@ public class MyLocation extends Fragment implements OnMapReadyCallback {
 
     SupportMapFragment sMapFragment;
     private GoogleMap mMap;
-    private double latitude;
-    private double longitude;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -49,6 +45,14 @@ public class MyLocation extends Fragment implements OnMapReadyCallback {
         sFm.beginTransaction().add(R.id.map, sMapFragment).commit();
     }
 
+    public void onDestroyView(){
+        super.onDestroyView();
+        Fragment fragment = (getFragmentManager().findFragmentById(R.id.map));
+        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+        ft.remove(fragment);
+        ft.commit();
+    }
+
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
@@ -58,16 +62,7 @@ public class MyLocation extends Fragment implements OnMapReadyCallback {
         mMap.moveCamera(CameraUpdateFactory.zoomTo(16));
 
         uiSettings();
-        currentPosition();
         setUpBar();
-    }
-
-    public void onDestroyView(){
-        super.onDestroyView();
-        Fragment fragment = (getFragmentManager().findFragmentById(R.id.map));
-        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-        ft.remove(fragment);
-        ft.commit();
     }
 
     private void uiSettings() {
@@ -78,14 +73,6 @@ public class MyLocation extends Fragment implements OnMapReadyCallback {
             mMap.getUiSettings().setMyLocationButtonEnabled(true);
             mMap.setMyLocationEnabled(true);
         }
-    }
-
-    public void currentPosition() {
-        android.location.Location location = new android.location.Location(LocationManager.GPS_PROVIDER);
-        latitude = location.getLatitude();
-        longitude = location.getLongitude();
-        LatLng current = new LatLng(latitude, longitude);
-        mMap.addMarker(new MarkerOptions().position(current).title("Your Position"));
     }
 
     private void setUpBar() {

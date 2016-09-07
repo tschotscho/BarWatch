@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/map"
-        android:name="com.google.android.gms.maps.MapFragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="400dp"
         android:clickable="true"></fragment>
@@ -32,16 +32,5 @@
         android:background="@color/material_blue_grey_800"
         android:paddingBottom="5dp"
         android:paddingLeft="10dp"/>
-
-    <Spinner
-        android:layout_marginTop="10dp"
-        android:id="@+id/spinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Wähle Bar"
-        android:textColorHint="#DDD"
-        android:background="#888"
-        />
-
 
 </LinearLayout>
