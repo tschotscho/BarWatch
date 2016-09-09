@@ -23,10 +23,12 @@ import com.google.android.gms.maps.model.MarkerOptions;
  */
 public class MyLocation extends Fragment implements OnMapReadyCallback {
 
-    /** String [] SPINNERLIST = {"Mood","KA5PER","Hemingway's","U-Bar","Pony","Jag deine Eltern nicht vom Hof","Alte Filmbühne",
-     "Banane", "Heimat", "Barock Bar", "Franky's Sportsbar","Sax", "Piratenhöhle" , "Orange Club" , "Da Silva", "Rauschgold",
-     "Ernstl","Suite 15","Beats", "Gatsby","Jalapenos","No. 7","Picasso","Falnnigans", "Bar 13","Upper Club 21", "Escobar",
-     "Zarap Zap Zap", "Magaritas","Max Bar", "Café Felix","Hexenhäuschen", "Skala"};**/
+    /**
+     * String [] SPINNERLIST = {"Mood","KA5PER","Hemingway's","U-Bar","Pony","Jag deine Eltern nicht vom Hof","Alte Filmbühne",
+     * "Banane", "Heimat", "Barock Bar", "Franky's Sportsbar","Sax", "Piratenhöhle" , "Orange Club" , "Da Silva", "Rauschgold",
+     * "Ernstl","Suite 15","Beats", "Gatsby","Jalapenos","No. 7","Picasso","Falnnigans", "Bar 13","Upper Club 21", "Escobar",
+     * "Zarap Zap Zap", "Magaritas","Max Bar", "Café Felix","Hexenhäuschen", "Skala"};
+     **/
 
     SupportMapFragment sMapFragment;
     private GoogleMap mMap;
@@ -45,14 +47,6 @@ public class MyLocation extends Fragment implements OnMapReadyCallback {
         sFm.beginTransaction().add(R.id.map, sMapFragment).commit();
     }
 
-    public void onDestroyView(){
-        super.onDestroyView();
-        Fragment fragment = (getFragmentManager().findFragmentById(R.id.map));
-        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-        ft.remove(fragment);
-        ft.commit();
-    }
-
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
@@ -63,6 +57,14 @@ public class MyLocation extends Fragment implements OnMapReadyCallback {
 
         uiSettings();
         setUpBar();
+    }
+
+    public void onDestroyView() {
+        super.onDestroyView();
+        Fragment fragment = (getFragmentManager().findFragmentById(R.id.map));
+        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+        ft.remove(fragment);
+        ft.commit();
     }
 
     private void uiSettings() {
