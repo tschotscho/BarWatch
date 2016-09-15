@@ -6,4 +6,82 @@
     <string name="barwatch">BarWatch</string>
     <string name="subtitle">Subtitle</string>
     <string name="title">Title</string>
+
+    <string name="add_item_button_confirm">Add</string>
+
+    <string name="kasper">Ka5per</string>
+    <string name="hemmingways">Hemmingways</string>
+    <string name="mood">Mood</string>
+    <string name="ubar">UBar</string>
+    <string name="pony">Pony</string>
+    <string name="jagd">Jag deine Eltern nicht vom Hof</string>
+    <string name="alteFilm">Alte Filmbühne</string>
+    <string name="banane">Banane</string>
+    <string name="heimat">Heimat</string>
+    <string name="barock">Barock Bar</string>
+    <string name="frankys">Frankys Sports Bar</string>
+    <string name="sax">Sax</string>
+    <string name="piratenhöhle">Piratenhöhle</string>
+    <string name="orange">Orange Bar</string>
+    <string name="dasilva">Da Silva</string>
+    <string name="rauschgold">Rauschgold</string>
+    <string name="ernstl">Ernstl</string>
+    <string name="suite">Suite 15</string>
+    <string name="beats">Beats</string>
+    <string name="gatsby">Gatsby</string>
+    <string name="jalapenos">Jalapenos</string>
+    <string name="no7">No7 Bar</string>
+    <string name="picasso">Picasso</string>
+    <string name="flannigans">Flannigans</string>
+    <string name="bar13">Bar13</string>
+    <string name="upper">Upper</string>
+    <string name="escobar">Escobar</string>
+    <string name="zap">Zarap Zap Zap</string>
+    <string name="margaritas">Margaritas</string>
+    <string name="max">Maxs Bar</string>
+
+
+    <string name="kasper_d">20-21 Uhr alle Cocktails (außer Strongs, Whiskey und Tequila) 6,20€, 3 monatlich wechselnde Cocktails den ganzen Abend für 6,50€</string>
+    <string name="hem_d">19:00 – 20:00 Uhr und 24:00 – 01:00 Uhr alle Cocktails 5,50€</string>
+    <string name="ubar_d">Cocktails-To-Go zwischen 21:30 Uhr -23:00 Uhr 3€ (Strongs 5€)</string>
+    <string name="jagd_d">zwei monatlich wechselnde Cocktails für 6,50€</string>
+    <string name="barock_d">5 monatlich wechselnde Special-Cocktails für 10€</string>
+    <string name="franky_d">wöchentlich wechselnde Abend-Specials </string>
+    <string name="orange_d">wöchentlich wechselnder Cocktail den ganzen Abend für 4,50€</string>
+    <string name="no7_d">täglich Happy-Hour von 20:00 bis 22:00 Uhr alle Cocktails 4,50€</string>
+    <string name="margaritas_d">17:00 – 20:00 Uhr alle Cocktails zum halben Preis</string>
+
+
+    <string name="altefilm_mo">Cocktails 4,50€</string>
+    <string name="banane_mo">Big Cocktails für 3,50€</string>
+    <string name="heimat_mo">bis 22:00 Uhr Helles 2€</string>
+    <string name="pirat_mo">Maß Bier 3,80€</string>
+    <string name="no7_mo">alle Flaschenbiere 1,99€, Tegernseer und Augustiner 2,80€</string>
+    <string name="picasso_mo">Doppeldecker Cocktails, Tequila 1,50€, 5 Tequila 5,00€, Minuspol und Blutwurz 1,50€</string>
+    <string name="bar13_mo">zwei Cocktails für 7,00€</string>
+    <string name="max_mo">Cocktail Happy-Hour 20:00 – 22:00 Uhr</string>
+    <string name="flannigans_moso">Cocktails 3,49€</string>
+
+    <string name="hem_di">Burger + Bier für 9,90€</string>
+    <string name="mood_di">alle Classic-Cocktails für 4,90€</string>
+    <string name="ubar_di">Longdrink Tripledecker 8,90€, Hugo und Lillet-Drinks 3,50€</string>
+    <string name="jag_di">Mexikaner 1€, Bruckmandl 2€; </string>
+    <string name="alteFilm_di">Cuba Libre 4€</string>
+    <string name="banane_di">diverse Shots für 0,50€</string>
+    <string name="heimat_di">Cocktails 2 für 1, Heineken 2€</string>
+    <string name="pirat_di">Cocktails für 4,90€</string>
+    <string name="dasilva_di">Pong or Pay (Triff den Becher und trink umsonst)</string>
+    <string name="rauschgold_di">Minuspol 1,50€, Hacker Pschorr 2,50€</string>
+    <string name="ernstl_di">Cocktails für 5,50€, Shots 2€</string>
+    <string name="suite_di">Longdrinks 4,90€, Helles 2,50€, Jägermeister 2,00€</string>
+    <string name="beats_di">Pils 2,50€, Prosecco on Ice 3,00€</string>
+    <string name="no7_di">Quizfragen richtig beantworten Getränk gratis bekommen</string>
+    <string name="picasso_di">Cocktail Happy-Hour 18:00 – 20:00 Uhr (3,00€), 20:00 – 22:00 Uhr (4,00€), 22:00 – 00:00 Uhr (5,00€), 00:00 – 02:00 Uhr (4,00€), Berentzen 1,50€</string>
+    <string name="bar13_di">alle Longdrinks 3,50€</string>
+    <string name="max_di">20:00-21:00 Uhr alle Kultcocktails für 3,50€, 21:00-22:00 Uhr alle Kultcocktails für 4,50€</string>
+
+
+    <string name="flannigans_dimi">Cocktails 3,99€</string>
+    <string name="barock_dimi">Special-Cocktails für 8€</string>
+    <string name="escobar_dimido">alle Cocktails 3,50€</string>
 </resources>

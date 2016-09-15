@@ -7,7 +7,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.hannes.barwatch.navigation.NavItem;
+import com.example.hannes.barwatch.item.NavItem;
 import com.example.hannes.barwatch.R;
 
 import java.util.List;

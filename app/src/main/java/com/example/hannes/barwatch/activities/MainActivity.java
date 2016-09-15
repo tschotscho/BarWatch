@@ -18,7 +18,7 @@ import java.util.List;
 
 import com.example.hannes.barwatch.fragments.Favourite;
 import com.example.hannes.barwatch.fragments.Location;
-import com.example.hannes.barwatch.navigation.NavItem;
+import com.example.hannes.barwatch.item.NavItem;
 import com.example.hannes.barwatch.R;
 import com.example.hannes.barwatch.adapter.NavListAdapter;
 import com.example.hannes.barwatch.fragments.Home;
