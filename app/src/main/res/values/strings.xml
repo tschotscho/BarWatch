@@ -2,4 +2,8 @@
     <string name="app_name">BarWatch</string>
     <string name="drawer_opened">Drawer Opened</string>
     <string name="drawer_closed">Drawer Closed</string>
+    <string name="regensburg">Regensburg</string>
+    <string name="barwatch">BarWatch</string>
+    <string name="subtitle">Subtitle</string>
+    <string name="title">Title</string>
 </resources>

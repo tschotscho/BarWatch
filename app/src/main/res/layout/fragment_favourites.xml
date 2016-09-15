@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:textSize="22sp"
         android:textStyle="bold"
-        android:textColor="#000"
+        android:textColor="@color/black"
         android:text="Favoriten"/>
 
 </LinearLayout>

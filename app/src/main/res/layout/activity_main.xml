@@ -14,7 +14,7 @@
     <!--Drawer Pane -->
     <RelativeLayout
         android:id="@+id/drawer_pane"
-        android:layout_width="280dp"
+        android:layout_width="@dimen/drawer_pane_width"
         android:layout_height="match_parent"
         android:layout_gravity="start">
 
@@ -22,16 +22,16 @@
         <RelativeLayout
             android:id="@+id/profile_box"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/profile_box_width"
             android:background="@color/material_blue_grey_800"
             android:gravity="center_vertical"
             android:padding="8dp">
 
             <ImageView
                 android:id="@+id/icon"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_margin="10dp"
+                android:layout_width="@dimen/imageview_width"
+                android:layout_height="@dimen/imageview_height"
+                android:layout_margin="@dimen/imageview_margin"
                 android:background="@drawable/ic_happy_hour" />
 
             <LinearLayout
@@ -43,17 +43,17 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="BarWatch"
-                    android:textColor="#fff"
-                    android:textSize="22sp"
+                    android:text="@string/barwatch"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/title_text_size"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Regensburg"
-                    android:textColor="#fff"
-                    android:textSize="18sp" />
+                    android:text="@string/regensburg"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/subtitle_text_size" />
 
             </LinearLayout>
         </RelativeLayout>
@@ -64,7 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/profile_box"
-            android:background="@android:color/white"
+            android:background="#757575"
             android:choiceMode="singleChoice"></ListView>
     </RelativeLayout>
 </android.support.v4.widget.DrawerLayout>
