@@ -8,29 +8,7 @@
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="match_parent"
         android:clickable="true" />
-
-    <TextView
-        android:id="@+id/heaeder"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/material_blue_grey_800"
-        android:paddingLeft="10dp"
-        android:paddingTop="5dp"
-        android:text="@string/barwatch"
-        android:textColor="@color/white"
-        android:textSize="26dp" />
-
-    <TextView
-        android:id="@+id/sub_heaeder"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/material_blue_grey_800"
-        android:paddingBottom="5dp"
-        android:paddingLeft="10dp"
-        android:text="@string/regensburg"
-        android:textColor="@color/white"
-        android:textSize="16dp" />
 
 </LinearLayout>

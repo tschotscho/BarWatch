@@ -64,7 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/profile_box"
-            android:background="#757575"
-            android:choiceMode="singleChoice"></ListView>
+            android:background="@color/grey"
+            android:choiceMode="singleChoice"/>
     </RelativeLayout>
 </android.support.v4.widget.DrawerLayout>
