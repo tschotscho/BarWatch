@@ -30,14 +30,14 @@ public class Monday extends Fragment {
     private BarDatabase bar_db;
 
     // Montags Angebote
-    private BarItem altefilm_mo;
-    private BarItem banane_mo;
-    private BarItem heimat_mo;
-    private BarItem pirat_mo;
-    private BarItem no7_mo;
-    private BarItem picasso_mo;
-    private BarItem bar13_mo;
-    private BarItem max_mo;
+    private BarItem altefilm;
+    private BarItem banane;
+    private BarItem heimat;
+    private BarItem pirat;
+    private BarItem no7;
+    private BarItem picasso;
+    private BarItem bar13;
+    private BarItem max;
 
 
     @Nullable
@@ -62,23 +62,23 @@ public class Monday extends Fragment {
 
     private void initMonday() {
 
-        altefilm_mo = new BarItem(getString(R.string.ab20), getString(R.string.alteFilm), getString(R.string.altefilm_mo));
-        banane_mo = new BarItem(getString(R.string.ab20), getString(R.string.banane), getString(R.string.banane_mo));
-        heimat_mo = new BarItem(getString(R.string.ab20), getString(R.string.heimat), getString(R.string.heimat_mo));
-        pirat_mo = new BarItem(getString(R.string.ab20), getString(R.string.piratenhöhle), getString(R.string.pirat_mo));
-        no7_mo = new BarItem(getString(R.string.ab20), getString(R.string.no7), getString(R.string.no7_mo));
-        picasso_mo = new BarItem(getString(R.string.ab20), getString(R.string.picasso), getString(R.string.pirat_mo));
-        bar13_mo = new BarItem(getString(R.string.ab20), getString(R.string.bar13), getString(R.string.bar13_mo));
-        max_mo = new BarItem(getString(R.string.ab20), getString(R.string.max), getString(R.string.max_mo));
+        altefilm = new BarItem(getString(R.string.ab20), getString(R.string.alteFilm), getString(R.string.altefilm_mo));
+        banane = new BarItem(getString(R.string.ab19), getString(R.string.banane), getString(R.string.banane_mo));
+        heimat = new BarItem(getString(R.string.ab19), getString(R.string.heimat), getString(R.string.heimat_mo));
+        pirat = new BarItem(getString(R.string.ab19), getString(R.string.piratenhöhle), getString(R.string.pirat_mo));
+        no7 = new BarItem(getString(R.string.ab20), getString(R.string.no7), getString(R.string.no7_mo));
+        picasso = new BarItem(getString(R.string.ab20), getString(R.string.picasso), getString(R.string.pirat_mo));
+        bar13 = new BarItem(getString(R.string.ab20), getString(R.string.bar13), getString(R.string.bar13_mo));
+        max = new BarItem(getString(R.string.ab20), getString(R.string.max), getString(R.string.max_mo));
 
-        bars.add(altefilm_mo);
-        bars.add(banane_mo);
-        bars.add(heimat_mo);
-        bars.add(pirat_mo);
-        bars.add(no7_mo);
-        bars.add(picasso_mo);
-        bars.add(bar13_mo);
-        bars.add(max_mo);
+        bars.add(banane);
+        bars.add(heimat);
+        bars.add(pirat);
+        bars.add(altefilm);
+        bars.add(no7);
+        bars.add(picasso);
+        bars.add(bar13);
+        bars.add(max);
 
     }
 

@@ -31,15 +31,15 @@ public class Daily extends Fragment {
 
 
     // Tägliche Angebote
-    private BarItem kasper_d;
-    private BarItem hemmingways_d;
-    private BarItem ubar_d;
-    private BarItem jagd_d;
-    private BarItem barock_d;
-    private BarItem franky_d;
-    private BarItem orange_d;
-    private BarItem no7_d;
-    private BarItem margaritas_d;
+    private BarItem kasper;
+    private BarItem hemmingways;
+    private BarItem ubar;
+    private BarItem jagd;
+    private BarItem barock;
+    private BarItem franky;
+    private BarItem orange;
+    private BarItem no7;
+    private BarItem margaritas;
 
 
     @Nullable
@@ -64,25 +64,25 @@ public class Daily extends Fragment {
 
     private void initDaily() {
 
-        margaritas_d = new BarItem(getString(R.string.ab17), getString(R.string.margaritas), getString(R.string.margaritas_d));
-        hemmingways_d = new BarItem(getString(R.string.ab19), getString(R.string.hemmingways), getString(R.string.hem_d));
-        kasper_d = new BarItem(getString(R.string.ab20), getString(R.string.kasper), getString(R.string.kasper_d));
-        jagd_d = new BarItem(getString(R.string.ab20), getString(R.string.jagd), getString(R.string.jagd_d));
-        ubar_d = new BarItem(getString(R.string.ab21), getString(R.string.ubar), getString(R.string.ubar_d));
-        barock_d = new BarItem(getString(R.string.ab20), getString(R.string.barock), getString(R.string.barock_d));
-        franky_d = new BarItem(getString(R.string.ab20), getString(R.string.frankys), getString(R.string.franky_d));
-        orange_d = new BarItem(getString(R.string.ab20), getString(R.string.orange), getString(R.string.orange_d));
-        no7_d = new BarItem(getString(R.string.ab20), getString(R.string.no7), getString(R.string.no7_d));
+        margaritas = new BarItem(getString(R.string.ab17), getString(R.string.margaritas), getString(R.string.margaritas_d));
+        hemmingways= new BarItem(getString(R.string.ab19), getString(R.string.hemmingways), getString(R.string.hem_d));
+        kasper = new BarItem(getString(R.string.ab20), getString(R.string.kasper), getString(R.string.kasper_d));
+        jagd = new BarItem(getString(R.string.ab20), getString(R.string.jagd), getString(R.string.jagd_d));
+        ubar = new BarItem(getString(R.string.ab21), getString(R.string.ubar), getString(R.string.ubar_d));
+        barock = new BarItem(getString(R.string.ab20), getString(R.string.barock), getString(R.string.barock_d));
+        franky = new BarItem(getString(R.string.ab20), getString(R.string.frankys), getString(R.string.franky_d));
+        orange = new BarItem(getString(R.string.ab20), getString(R.string.orange), getString(R.string.orange_d));
+        no7 = new BarItem(getString(R.string.ab20), getString(R.string.no7), getString(R.string.no7_d));
 
-        bars.add(margaritas_d);
-        bars.add(hemmingways_d);
-        bars.add(kasper_d);
-        bars.add(jagd_d);
-        bars.add(barock_d);
-        bars.add(franky_d);
-        bars.add(orange_d);
-        bars.add(no7_d);
-        bars.add(ubar_d);
+        bars.add(margaritas);
+        bars.add(hemmingways);
+        bars.add(kasper);
+        bars.add(jagd);
+        bars.add(barock);
+        bars.add(franky);
+        bars.add(orange);
+        bars.add(no7);
+        bars.add(ubar);
 
 
     }

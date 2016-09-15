@@ -28,19 +28,25 @@ public class Tuesday extends Fragment {
     private BarAdapter bar_adapter;
     private BarDatabase bar_db;
 
-    // Tägliche Angebote
-    private BarItem kasper_d;
-    private BarItem hemmingways_d;
-    private BarItem ubar_d;
-    private BarItem jagd_d;
-    private BarItem barock_d;
-    private BarItem franky_d;
-    private BarItem orange_d;
-    private BarItem no7_d;
-    private BarItem margaritas_d;
-
-    //Dienstags Angebote
-
+    private BarItem hem;
+    private BarItem mood;
+    private BarItem ubar;
+    private BarItem jagd;
+    private BarItem altefilm;
+    private BarItem banane;
+    private BarItem heimat;
+    private BarItem pirat;
+    private BarItem dasilva;
+    private BarItem rauschgold;
+    private BarItem ernstl;
+    private BarItem suite;
+    private BarItem beats;
+    private BarItem no7;
+    private BarItem picasso;
+    private BarItem bar13;
+    private BarItem max;
+    private BarItem barock;
+    private BarItem escobar;
 
     @Nullable
     @Override
@@ -62,6 +68,46 @@ public class Tuesday extends Fragment {
     }
 
     private void initTuesday() {
+
+        hem = new BarItem(getString(R.string.ab19), getString(R.string.hemmingways), getString(R.string.hem_di));
+        mood = new BarItem(getString(R.string.ab20), getString(R.string.mood), getString(R.string.mood_di));
+        heimat = new BarItem(getString(R.string.ab19), getString(R.string.heimat), getString(R.string.heimat_di));
+        pirat = new BarItem(getString(R.string.ab19), getString(R.string.piratenhöhle), getString(R.string.pirat_di));
+        no7 = new BarItem(getString(R.string.ab20), getString(R.string.no7), getString(R.string.no7_di));
+        picasso = new BarItem(getString(R.string.ab20), getString(R.string.picasso), getString(R.string.picasso_di));
+        bar13 = new BarItem(getString(R.string.ab20), getString(R.string.bar13), getString(R.string.bar13_di));
+        max = new BarItem(getString(R.string.ab20), getString(R.string.max), getString(R.string.max_di));
+        ubar = new BarItem(getString(R.string.ab21), getString(R.string.ubar), getString(R.string.ubar_di));
+        jagd = new BarItem(getString(R.string.ab20), getString(R.string.jagd), getString(R.string.jag_di_do));
+        altefilm = new BarItem(getString(R.string.ab20), getString(R.string.alteFilm), getString(R.string.alteFilm_di));
+        banane = new BarItem(getString(R.string.ab19), getString(R.string.banane), getString(R.string.banane_di));
+        dasilva = new BarItem(getString(R.string.ab21), getString(R.string.dasilva), getString(R.string.dasilva_di));
+        rauschgold = new BarItem(getString(R.string.ab22), getString(R.string.rauschgold), getString(R.string.rauschgold_di));
+        ernstl = new BarItem(getString(R.string.ab00), getString(R.string.ernstl), getString(R.string.ernstl_di));
+        suite = new BarItem(getString(R.string.ab22), getString(R.string.suite), getString(R.string.suite_di));
+        beats = new BarItem(getString(R.string.ab22), getString(R.string.beats), getString(R.string.beats_di));
+        barock = new BarItem(getString(R.string.ab19), getString(R.string.barock), getString(R.string.barock_di_mi));
+        escobar = new BarItem(getString(R.string.ab21), getString(R.string.escobar), getString(R.string.escobar_di_mi_do));
+
+        bars.add(banane);
+        bars.add(barock);
+        bars.add(heimat);
+        bars.add(hem);
+        bars.add(pirat);
+        bars.add(altefilm);
+        bars.add(bar13);
+        bars.add(jagd);
+        bars.add(mood);
+        bars.add(no7);
+        bars.add(picasso);
+        bars.add(max);
+        bars.add(escobar);
+        bars.add(dasilva);
+        bars.add(ubar);
+        bars.add(beats);
+        bars.add(rauschgold);
+        bars.add(suite);
+        bars.add(ernstl);
     }
 
 

@@ -9,6 +9,8 @@
 
     <string name="add_item_button_confirm">Add</string>
 
+    //bars in regensburg
+    <string name="relax">Vor sich hin vegitieren</string>
     <string name="kasper">Ka5per</string>
     <string name="hemmingways">Hemmingways</string>
     <string name="mood">Mood</string>
@@ -40,52 +42,121 @@
     <string name="margaritas">Margaritas</string>
     <string name="max">Maxs Bar</string>
 
-
-    <string name="kasper_d">20-21 Uhr alle Cocktails (außer Strongs, Whiskey und Tequila) 6,20€, 3 monatlich wechselnde Cocktails den ganzen Abend für 6,50€</string>
-    <string name="hem_d">19:00 – 20:00 Uhr und 24:00 – 01:00 Uhr alle Cocktails 5,50€</string>
-    <string name="ubar_d">Cocktails-To-Go zwischen 21:30 Uhr -23:00 Uhr 3€ (Strongs 5€)</string>
+    //daily offerts
+    <string name="kasper_d">bis 21:00 Uhr: Cocktails (außer Strongs, Whiskey und Tequila) 6,20€, 3 monatlich wechselnde Cocktails den ganzen Abend für 6,50€</string>
+    <string name="hem_d">bis 20:00 Uhr und 24:00 – 01:00 Uhr: Cocktails 5,50€</string>
+    <string name="ubar_d">21:30 - 23:00 Uhr:Cocktails-To-Go ab 3€ (Strongs 5€)</string>
     <string name="jagd_d">zwei monatlich wechselnde Cocktails für 6,50€</string>
     <string name="barock_d">5 monatlich wechselnde Special-Cocktails für 10€</string>
     <string name="franky_d">wöchentlich wechselnde Abend-Specials </string>
     <string name="orange_d">wöchentlich wechselnder Cocktail den ganzen Abend für 4,50€</string>
     <string name="no7_d">täglich Happy-Hour von 20:00 bis 22:00 Uhr alle Cocktails 4,50€</string>
-    <string name="margaritas_d">17:00 – 20:00 Uhr alle Cocktails zum halben Preis</string>
+    <string name="margaritas_d">bis 20:00 Uhr: Cocktails zum halben Preis</string>
 
 
-    <string name="altefilm_mo">Cocktails 4,50€</string>
-    <string name="banane_mo">Big Cocktails für 3,50€</string>
-    <string name="heimat_mo">bis 22:00 Uhr Helles 2€</string>
-    <string name="pirat_mo">Maß Bier 3,80€</string>
-    <string name="no7_mo">alle Flaschenbiere 1,99€, Tegernseer und Augustiner 2,80€</string>
-    <string name="picasso_mo">Doppeldecker Cocktails, Tequila 1,50€, 5 Tequila 5,00€, Minuspol und Blutwurz 1,50€</string>
-    <string name="bar13_mo">zwei Cocktails für 7,00€</string>
-    <string name="max_mo">Cocktail Happy-Hour 20:00 – 22:00 Uhr</string>
-    <string name="flannigans_moso">Cocktails 3,49€</string>
+    //monday offerts
+    <string name="altefilm_mo">Cocktails: 4,50€</string>
+    <string name="banane_mo">Big Cocktails: 3,50€</string>
+    <string name="heimat_mo">bis 22:00 Uhr: Helles 2€</string>
+    <string name="pirat_mo">Maß Bier: 3,80€</string>
+    <string name="no7_mo">Flaschenbiere: 1,99€, Tegernseer/Augustiner: 2,80€</string>
+    <string name="picasso_mo">Doppeldecker Cocktails, Tequila: 1,50€ (5x 5,00€), Minuspol und Blutwurz je 1,50€</string>
+    <string name="bar13_mo">2 Cocktails: 7,00€</string>
+    <string name="max_mo">bis 22:00 Uhr: Cocktail Happy-Hour</string>
+    <string name="flannigans_moso">Cocktails: 3,49€</string>
 
-    <string name="hem_di">Burger + Bier für 9,90€</string>
-    <string name="mood_di">alle Classic-Cocktails für 4,90€</string>
-    <string name="ubar_di">Longdrink Tripledecker 8,90€, Hugo und Lillet-Drinks 3,50€</string>
-    <string name="jag_di">Mexikaner 1€, Bruckmandl 2€; </string>
-    <string name="alteFilm_di">Cuba Libre 4€</string>
-    <string name="banane_di">diverse Shots für 0,50€</string>
-    <string name="heimat_di">Cocktails 2 für 1, Heineken 2€</string>
-    <string name="pirat_di">Cocktails für 4,90€</string>
+
+    //tuesday offerts
+    <string name="hem_di">Burger + Bier: 9,90€</string>
+    <string name="mood_di">Classic-Cocktails: 4,90€</string>
+    <string name="ubar_di">Longdrink Tripledecker: 8,90€, Hugo/Lillet-Drinks: 3,50€</string>
+    <string name="jag_di_do">Mexikaner: 1€, Bruckmandl: 2€; </string>
+    <string name="alteFilm_di">Cuba Libre: 4€</string>
+    <string name="banane_di">diverse Shots: 0,50€</string>
+    <string name="heimat_di">Cocktails 2 für 1, Heineken: 2€</string>
+    <string name="pirat_di">Cocktails: 4,90€</string>
     <string name="dasilva_di">Pong or Pay (Triff den Becher und trink umsonst)</string>
-    <string name="rauschgold_di">Minuspol 1,50€, Hacker Pschorr 2,50€</string>
-    <string name="ernstl_di">Cocktails für 5,50€, Shots 2€</string>
-    <string name="suite_di">Longdrinks 4,90€, Helles 2,50€, Jägermeister 2,00€</string>
-    <string name="beats_di">Pils 2,50€, Prosecco on Ice 3,00€</string>
+    <string name="rauschgold_di">Minuspol: 1,50€, Hacker Pschorr: 2,50€</string>
+    <string name="ernstl_di">Cocktails: 5,50€, Shots: 2€</string>
+    <string name="suite_di">Longdrinks: 4,90€, Helles: 2,50€, Jägermeister: 2,00€</string>
+    <string name="beats_di">Pils: 2,50€, Prosecco on Ice: 3,00€</string>
     <string name="no7_di">Quizfragen richtig beantworten Getränk gratis bekommen</string>
-    <string name="picasso_di">Cocktail Happy-Hour 18:00 – 20:00 Uhr (3,00€), 20:00 – 22:00 Uhr (4,00€), 22:00 – 00:00 Uhr (5,00€), 00:00 – 02:00 Uhr (4,00€), Berentzen 1,50€</string>
-    <string name="bar13_di">alle Longdrinks 3,50€</string>
-    <string name="max_di">20:00-21:00 Uhr alle Kultcocktails für 3,50€, 21:00-22:00 Uhr alle Kultcocktails für 4,50€</string>
+    <string name="picasso_di">bis 20:00 Uhr: Cocktail Happy-Hour (3,00€), 20:00 – 22:00 Uhr: 4,00€, 22:00 – 00:00 Uhr: 5,00€, 00:00 – 02:00 Uhr: 4,00€, Berentzen: 1,50€</string>
+    <string name="bar13_di">alle Longdrinks: 3,50€</string>
+    <string name="max_di">bis 21:00 Uhr: alle Kultcocktails: 3,50€, 21:00-22:00 Uhr: alle Kultcocktails: 4,50€</string>
+    <string name="flan_di_mi">Cocktails: 3,99€</string>
+    <string name="escobar_di_mi_do">Cocktails: 3,50€</string>
 
 
-    <string name="flannigans_dimi">Cocktails 3,99€</string>
-    <string name="barock_dimi">Special-Cocktails für 8€</string>
-    <string name="escobar_dimido">alle Cocktails 3,50€</string>
+    //wednesday offerts
+    <string name="ubar_mi">Tripeldecker: Cuba Libre/Gin-Tonic/Touchdown</string>
+    <string name="pony_mi">Beerpong, Münzewerfen</string>
+    <string name="heimat_mi">Gin-Tonic: 4€, Cocktails: 4,50€</string>
+    <string name="barock_di_mi">Sepcial-Cocktails: 8€</string>
+    <string name="piraten_mi">Longdrinks 2 für 1</string>
+    <string name="no7_mi"> 2 Bier/Prosecci für 1€</string>
+    <string name="picasso_mi">Cocktails: 4,50€, Minuspol: 2,00€ (6x: 10€), Minuspool Longdrinks: 4,10€,
+    Festbier: 2,50€, Goaßmaß: 6,50€, Absolut Wodka + Beigetränke: 55€</string>
+    <string name="bar_mi">Wodka-Lime: 1,50€ (10x: 10€)</string>
+    <string name="zap_mi">Shots: 1,20€, Cocktails: 4,50€, Hacker Pschorr: 2,50€</string>
+    <string name="max_mi">bis 23:00 Uhr: alle Kultcocktails 4,50€, 23:00-03:30 Uhr: Prosecco 2,00€</string>
 
-    <string name="ganztägig">--</string>
+
+    //thursday offerts
+    <string name="hem_do">Cocktails 2 für 1</string>
+    <string name="mood_do">Bullenrunde: 9,90€, Prosecco for free for Ladies</string>
+    <string name="ubar_do">Tripeldecker: Cocktail 8,90€, Lillet-Berry 7,90€ </string>
+    <string name="pony_do">Longdrinks: 4€, Bier + Shot: 3,50€</string>
+    <string name="banane_do">Würfel: mit 6 for free</string>
+    <string name="heimat_do">Shots: 1,50€, Cuba Libre: 4,50€ </string>
+    <string name="sax_do">Shots: 5 for 4</string>
+    <string name="piraten_do">Longdrinks: 3,80€</string>
+    <string name="dasilva_do">2 für 1: Shots/Bier/Wodka Bull</string>
+    <string name="rausch_do_fr_sa">bis 00:00: Cocktails/Longdrinks: 4€</string>
+    <string name="suite_do">Redbull Longdrinks: 3,90€</string>
+    <string name="gatsby_do">Heineken: 2,00€, Gin-Tonic/Cuba Libre/Wodka Effect: 5,00€</string>
+    <string name="jala_do">4 Tequila: 5,00€, 5 Flaschenpils: 10€, 4 Tex Biere: 15€, 4 Cuba Libre: 20€</string>
+    <string name="no7_do">Caipi Variationen: 4,50€</string>
+    <string name="picasso_do">Cocktails: 4,50€, Berentzen/Ouzo/Wodka-Lime: 1,50€ (6x: 6€)</string>
+    <string name="flan_do_fr_sa">Cocktails: 4,49€</string>
+    <string name="bar_do">alle kurzen Longdrinks: 2,00€</string>
+    <string name="upper_do">Flaschenbiere: 2,00€, Longdrinks: 4,00€</string>
+    <string name="zap_do">Prosecco: 2,00€, Hacker Pschorr:2,00€, Longdrinks: 3,00€, Shots: 2,00€</string>
+    <string name="magaritas_do">Biermaß: 4,99€, Cocktailmaß: 9,99€</string>
+    <string name="max_do_fr_sa">bis 23:00 Uhr: Kultcocktails 5,00€, 23:00-03:30 Uhr: Prosecco 2,50€</string>
+
+
+    //friday offerts
+    <string name="escobar_fr_sa">Cocktails: 4,50€</string>
+    <string name="ubar_fr_sa">Top 3 Tripeldecker: 8,90€, Wodka-Bull Doppel: 8,90€</string>
+    <string name="alte_fr">01:00-02:00:Longdrinks 4€</string>
+    <string name="banane_fr_sa">Gratis Chips</string>
+    <string name="heimat_fr_sa">bis 22:00 Uhr: Happy Hour 4,50€</string>
+    <string name="piraten_fr_sa">bis 22:00 Uhr: Cocktails 4,90€</string>
+    <string name="dasilva_fr">Cocktails: 4,90€</string>
+    <string name="beats_fr">Prosecco Longdrinks: 3,90€</string>
+    <string name="gatsby_fr_sa">bis 17:00: Burger Menü: 9,90€ (nur mit Stempel vom Gatsby vom Vortag)</string>
+    <string name="jalapenos_fr">Redbull Specials: 5,20€</string>
+    <string name="picasso_fr">Cocktails: ab 4,50€, Festbier: 2,50€, Tequila: 1,50€(5x: 5,00€),
+        Minuspol: 2,00€, Havana 3 (0,7L) + Beigetränke: 49,00€; </string>
+    <string name="bar_fr"> bis 22:00: 2 Longdrinks 7,00€</string>
+    <string name="zap_fr">Captain Morgen Longdrinks: 3,50€</string>
+
+
+    //saturday offerts
+    <string name="picasso_sa">Cocktails: ab 4,50€, Gin RedBull Silver: 5,50€, Franz Joseph: 3,90€,
+        Minuspol/Jägermeister/Absolut Wodka: 2€</string>
+    <string name="bar_sa">bis 22:00: 25% auf jeden Pitcher Bier </string>
+    <string name="zap_sa">bis 00:00: Hells und Tafelwasser: 1,50€</string>
+
+
+    //sunday offerts
+    <string name="picasso_so">2 Cocktails: ab 7,50€, Ouzo: 1,50€ (5x: 5,00€)</string>
+    <string name="bar_so">Bier: 2,60€</string>
+    <string name="relax_so">und auskatern!</string>
+
+    <string name="feierabend">--</string>
+    <string name="ab11">11</string>
     <string name="ab17">17</string>
     <string name="ab18">18</string>
     <string name="ab19">19</string>
