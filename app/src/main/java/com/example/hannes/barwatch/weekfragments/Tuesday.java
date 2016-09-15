@@ -31,7 +31,7 @@ public class Tuesday extends Fragment {
     // Tägliche Angebote
     private BarItem kasper_d;
     private BarItem hemmingways_d;
-    private BarItem  ubar_d;
+    private BarItem ubar_d;
     private BarItem jagd_d;
     private BarItem barock_d;
     private BarItem franky_d;
@@ -40,9 +40,6 @@ public class Tuesday extends Fragment {
     private BarItem margaritas_d;
 
     //Dienstags Angebote
-
-
-
 
 
     @Nullable
@@ -74,12 +71,12 @@ public class Tuesday extends Fragment {
         bar_adapter.notifyDataSetChanged();
     }
 
-    private void initDB(){
+    private void initDB() {
         bar_db = new BarDatabase(this.getActivity());
         bar_db.open();
     }
 
-    private void initUI(){
+    private void initUI() {
         initTaskButton();
         initListView();
         initFavAdapter();
@@ -93,7 +90,7 @@ public class Tuesday extends Fragment {
     private void initTaskButton() {
     }
 
-    private void initListView(){
+    private void initListView() {
         list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {

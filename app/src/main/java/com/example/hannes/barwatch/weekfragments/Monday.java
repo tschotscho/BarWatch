@@ -40,7 +40,6 @@ public class Monday extends Fragment {
     private BarItem max_mo;
 
 
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -63,14 +62,14 @@ public class Monday extends Fragment {
 
     private void initMonday() {
 
-        altefilm_mo = new BarItem(getString(R.string.ab20),getString(R.string.alteFilm),getString(R.string.altefilm_mo));
-        banane_mo = new BarItem(getString(R.string.ab20),getString(R.string.banane),getString(R.string.banane_mo));
-        heimat_mo = new BarItem(getString(R.string.ab20),getString(R.string.heimat),getString(R.string.heimat_mo));
-        pirat_mo = new BarItem(getString(R.string.ab20),getString(R.string.piratenhöhle), getString(R.string.pirat_mo));
-        no7_mo = new BarItem(getString(R.string.ab20),getString(R.string.no7), getString(R.string.no7_mo));
-        picasso_mo = new BarItem(getString(R.string.ab20),getString(R.string.picasso), getString(R.string.pirat_mo));
-        bar13_mo = new BarItem(getString(R.string.ab20),getString(R.string.bar13), getString(R.string.bar13_mo));
-        max_mo = new BarItem(getString(R.string.ab20),getString(R.string.max), getString(R.string.max_mo));
+        altefilm_mo = new BarItem(getString(R.string.ab20), getString(R.string.alteFilm), getString(R.string.altefilm_mo));
+        banane_mo = new BarItem(getString(R.string.ab20), getString(R.string.banane), getString(R.string.banane_mo));
+        heimat_mo = new BarItem(getString(R.string.ab20), getString(R.string.heimat), getString(R.string.heimat_mo));
+        pirat_mo = new BarItem(getString(R.string.ab20), getString(R.string.piratenhöhle), getString(R.string.pirat_mo));
+        no7_mo = new BarItem(getString(R.string.ab20), getString(R.string.no7), getString(R.string.no7_mo));
+        picasso_mo = new BarItem(getString(R.string.ab20), getString(R.string.picasso), getString(R.string.pirat_mo));
+        bar13_mo = new BarItem(getString(R.string.ab20), getString(R.string.bar13), getString(R.string.bar13_mo));
+        max_mo = new BarItem(getString(R.string.ab20), getString(R.string.max), getString(R.string.max_mo));
 
         bars.add(altefilm_mo);
         bars.add(banane_mo);
@@ -89,12 +88,12 @@ public class Monday extends Fragment {
         bar_adapter.notifyDataSetChanged();
     }
 
-    private void initDB(){
+    private void initDB() {
         bar_db = new BarDatabase(this.getActivity());
         bar_db.open();
     }
 
-    private void initUI(){
+    private void initUI() {
         initTaskButton();
         initListView();
         initFavAdapter();
@@ -108,7 +107,7 @@ public class Monday extends Fragment {
     private void initTaskButton() {
     }
 
-    private void initListView(){
+    private void initListView() {
         list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
