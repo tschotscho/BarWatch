@@ -21,28 +21,25 @@ import com.example.hannes.barwatch.item.BarItem;
 /**
  * Created by Christopher on 11.08.2016.
  */
-public class Tuesday extends Fragment {
+public class Daily extends Fragment {
+
     ListView list;
 
     private ArrayList<BarItem> bars = new ArrayList<BarItem>();
     private BarAdapter bar_adapter;
     private BarDatabase bar_db;
 
+
     // Tägliche Angebote
     private BarItem kasper_d;
     private BarItem hemmingways_d;
-    private BarItem  ubar_d;
+    private BarItem ubar_d;
     private BarItem jagd_d;
     private BarItem barock_d;
     private BarItem franky_d;
     private BarItem orange_d;
     private BarItem no7_d;
     private BarItem margaritas_d;
-
-    //Dienstags Angebote
-
-
-
 
 
     @Nullable
@@ -54,19 +51,41 @@ public class Tuesday extends Fragment {
         list = (ListView) v.findViewById(R.id.daily_list);
 
         TextView week = (TextView) v.findViewById(R.id.weekday);
-        week.setText("Dienstag");
+        week.setText("Täglich");
 
         initDB();
         initUI();
         updateList();
-        initTuesday();
+        initDaily();
+
 
         return v;
     }
 
-    private void initTuesday() {
-    }
+    private void initDaily() {
 
+        margaritas_d = new BarItem(getString(R.string.ab17), getString(R.string.margaritas), getString(R.string.margaritas_d));
+        hemmingways_d = new BarItem(getString(R.string.ab19), getString(R.string.hemmingways), getString(R.string.hem_d));
+        kasper_d = new BarItem(getString(R.string.ab20), getString(R.string.kasper), getString(R.string.kasper_d));
+        jagd_d = new BarItem(getString(R.string.ab20), getString(R.string.jagd), getString(R.string.jagd_d));
+        ubar_d = new BarItem(getString(R.string.ab21), getString(R.string.ubar), getString(R.string.ubar_d));
+        barock_d = new BarItem(getString(R.string.ab20), getString(R.string.barock), getString(R.string.barock_d));
+        franky_d = new BarItem(getString(R.string.ab20), getString(R.string.frankys), getString(R.string.franky_d));
+        orange_d = new BarItem(getString(R.string.ab20), getString(R.string.orange), getString(R.string.orange_d));
+        no7_d = new BarItem(getString(R.string.ab20), getString(R.string.no7), getString(R.string.no7_d));
+
+        bars.add(margaritas_d);
+        bars.add(hemmingways_d);
+        bars.add(kasper_d);
+        bars.add(jagd_d);
+        bars.add(barock_d);
+        bars.add(franky_d);
+        bars.add(orange_d);
+        bars.add(no7_d);
+        bars.add(ubar_d);
+
+
+    }
 
     private void updateList() {
         bars.clear();
@@ -74,12 +93,12 @@ public class Tuesday extends Fragment {
         bar_adapter.notifyDataSetChanged();
     }
 
-    private void initDB(){
+    private void initDB() {
         bar_db = new BarDatabase(this.getActivity());
         bar_db.open();
     }
 
-    private void initUI(){
+    private void initUI() {
         initTaskButton();
         initListView();
         initFavAdapter();
@@ -93,7 +112,7 @@ public class Tuesday extends Fragment {
     private void initTaskButton() {
     }
 
-    private void initListView(){
+    private void initListView() {
         list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {

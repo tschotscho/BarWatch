@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.hannes.barwatch.R;
 
@@ -28,18 +29,6 @@ public class Monday extends Fragment {
     private BarAdapter bar_adapter;
     private BarDatabase bar_db;
 
-
-    // Tägliche Angebote
-    private BarItem kasper_d;
-    private BarItem hemmingways_d;
-    private BarItem  ubar_d;
-    private BarItem jagd_d;
-    private BarItem barock_d;
-    private BarItem franky_d;
-    private BarItem orange_d;
-    private BarItem no7_d;
-    private BarItem margaritas_d;
-
     // Montags Angebote
     private BarItem altefilm_mo;
     private BarItem banane_mo;
@@ -56,15 +45,16 @@ public class Monday extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.monday_layout, container, false);
+        View v = inflater.inflate(R.layout.daily_layout, container, false);
 
-        list = (ListView) v.findViewById(R.id.mon_list);
+        list = (ListView) v.findViewById(R.id.daily_list);
 
+        TextView week = (TextView) v.findViewById(R.id.weekday);
+        week.setText("Montag");
 
         initDB();
         initUI();
         updateList();
-        initDaily();
         initMonday();
 
 
@@ -73,14 +63,14 @@ public class Monday extends Fragment {
 
     private void initMonday() {
 
-        altefilm_mo = new BarItem(getString(R.string.alteFilm),getString(R.string.altefilm_mo));
-        banane_mo = new BarItem(getString(R.string.banane),getString(R.string.banane_mo));
-        heimat_mo = new BarItem(getString(R.string.heimat),getString(R.string.heimat_mo));
-        pirat_mo = new BarItem(getString(R.string.piratenhöhle), getString(R.string.pirat_mo));
-        no7_mo = new BarItem(getString(R.string.no7), getString(R.string.no7_mo));
-        picasso_mo = new BarItem(getString(R.string.picasso), getString(R.string.pirat_mo));
-        bar13_mo = new BarItem(getString(R.string.bar13), getString(R.string.bar13_mo));
-        max_mo = new BarItem(getString(R.string.max), getString(R.string.max_mo));
+        altefilm_mo = new BarItem(getString(R.string.ab20),getString(R.string.alteFilm),getString(R.string.altefilm_mo));
+        banane_mo = new BarItem(getString(R.string.ab20),getString(R.string.banane),getString(R.string.banane_mo));
+        heimat_mo = new BarItem(getString(R.string.ab20),getString(R.string.heimat),getString(R.string.heimat_mo));
+        pirat_mo = new BarItem(getString(R.string.ab20),getString(R.string.piratenhöhle), getString(R.string.pirat_mo));
+        no7_mo = new BarItem(getString(R.string.ab20),getString(R.string.no7), getString(R.string.no7_mo));
+        picasso_mo = new BarItem(getString(R.string.ab20),getString(R.string.picasso), getString(R.string.pirat_mo));
+        bar13_mo = new BarItem(getString(R.string.ab20),getString(R.string.bar13), getString(R.string.bar13_mo));
+        max_mo = new BarItem(getString(R.string.ab20),getString(R.string.max), getString(R.string.max_mo));
 
         bars.add(altefilm_mo);
         bars.add(banane_mo);
@@ -91,30 +81,6 @@ public class Monday extends Fragment {
         bars.add(bar13_mo);
         bars.add(max_mo);
 
-    }
-
-    private void initDaily() {
-        kasper_d = new BarItem(getString(R.string.kasper), getString(R.string.kasper_d));
-        hemmingways_d = new BarItem(getString(R.string.hemmingways),getString(R.string.hem_d));
-        ubar_d = new BarItem(getString(R.string.ubar), getString(R.string.ubar_d));
-        jagd_d = new BarItem(getString(R.string.jagd), getString(R.string.jagd_d));
-        barock_d = new BarItem(getString(R.string.barock), getString(R.string.barock_d));
-        franky_d = new BarItem(getString(R.string.frankys), getString(R.string.franky_d));
-        orange_d = new BarItem(getString(R.string.orange), getString(R.string.orange_d));
-        no7_d = new BarItem(getString(R.string.no7), getString(R.string.no7_d));
-        margaritas_d = new BarItem(getString(R.string.margaritas), getString(R.string.margaritas_d));
-
-
-
-        bars.add(kasper_d);
-        bars.add(hemmingways_d);
-        bars.add(ubar_d);
-        bars.add(jagd_d);
-        bars.add(barock_d);
-        bars.add(franky_d);
-        bars.add(orange_d);
-        bars.add(no7_d);
-        bars.add(margaritas_d);
     }
 
     private void updateList() {

@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.hannes.barwatch.R;
 
@@ -17,7 +18,10 @@ public class Wednesday extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.wednesday_layout, container, false);
+        View v = inflater.inflate(R.layout.daily_layout, container, false);
+
+        TextView week = (TextView) v.findViewById(R.id.weekday);
+        week.setText("Mittwoch");
 
         return v;
     }

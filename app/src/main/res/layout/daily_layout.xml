@@ -5,6 +5,7 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/weekday"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="28sp"
@@ -12,7 +13,13 @@
         android:background="@color/material_blue_grey_800"
         android:gravity="center"
         android:textStyle="bold"
-        android:text="Wednesday"
+        android:text="Täglich"
         />
+
+    <ListView
+        android:id="@+id/daily_list"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
 
 </LinearLayout>

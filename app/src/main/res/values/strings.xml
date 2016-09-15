@@ -84,4 +84,15 @@
     <string name="flannigans_dimi">Cocktails 3,99€</string>
     <string name="barock_dimi">Special-Cocktails für 8€</string>
     <string name="escobar_dimido">alle Cocktails 3,50€</string>
+
+    <string name="ganztägig">--</string>
+    <string name="ab17">17</string>
+    <string name="ab18">18</string>
+    <string name="ab19">19</string>
+    <string name="ab20">20</string>
+    <string name="ab21">21</string>
+    <string name="ab22">22</string>
+    <string name="ab23">23</string>
+    <string name="ab00">00</string>
+
 </resources>

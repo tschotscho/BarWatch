@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.example.hannes.barwatch.adapter.WeekPagerAdapter;
+import com.example.hannes.barwatch.weekfragments.Daily;
 import com.example.hannes.barwatch.weekfragments.Monday;
 import com.example.hannes.barwatch.weekfragments.Tuesday;
 import com.example.hannes.barwatch.weekfragments.Wednesday;
@@ -45,6 +46,7 @@ public class Home extends Fragment {
         viewpager = (ViewPager) v.findViewById(R.id.view_pager);
 
         listWeek = new ArrayList<Fragment>();
+        listWeek.add(new Daily());
         listWeek.add(new Monday());
         listWeek.add(new Tuesday());
         listWeek.add(new Wednesday());
