@@ -20,7 +20,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 /**
  * Created by Christopher on 18.08.2016.
  */
-public class MyLocation extends Fragment implements OnMapReadyCallback {
+public class Location extends Fragment implements OnMapReadyCallback {
 
     /**
      * String [] SPINNERLIST = {"Mood","KA5PER","Hemingway's","U-Bar","Pony","Jag deine Eltern nicht vom Hof","Alte Filmbühne",

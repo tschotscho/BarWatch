@@ -25,7 +25,7 @@ import com.example.hannes.barwatch.weekfragments.Sunday;
 /**
  * Created by Christopher on 18.08.2016.
  */
-public class MyHome extends Fragment {
+public class Home extends Fragment {
 
     List<Fragment> listWeek;
     ViewPager viewpager;
@@ -35,8 +35,6 @@ public class MyHome extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         v = inflater.inflate(R.layout.fragment_home, container, false);
-
-        //We put Viewpager here
 
         initViewPager();
 

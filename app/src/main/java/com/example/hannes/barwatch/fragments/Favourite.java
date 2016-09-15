@@ -12,7 +12,7 @@ import com.example.hannes.barwatch.R;
 /**
  * Created by Christopher on 18.08.2016.
  */
-public class MyFavourite extends Fragment {
+public class Favourite extends Fragment {
 
     @Nullable
     @Override
