@@ -23,6 +23,7 @@ public class BarDatabase {
     private static final int DATABASE_VERSION = 1;
 
     public static final String KEY_ID = "_id";
+    public static final String KEY_TIME = "time";
     public static final String KEY_NAME = "name";
     public static final String KEY_ANGEBOT = "angebot";
     //public static final float KEY_LAT = "lat";
@@ -57,6 +58,7 @@ public class BarDatabase {
     public long insertFavorit(BarItem fav){
         ContentValues newFavValues = new ContentValues();
 
+        newFavValues.put(KEY_TIME, fav.getTime());
         newFavValues.put(KEY_NAME, fav.getName());
         newFavValues.put(KEY_ANGEBOT, fav.getAngebote());
 
