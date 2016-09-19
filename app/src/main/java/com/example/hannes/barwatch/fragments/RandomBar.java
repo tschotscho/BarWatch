@@ -8,9 +8,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.hannes.barwatch.R;
 import com.example.hannes.barwatch.database.BarLocation;
@@ -19,31 +18,34 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * Created by Christopher on 18.08.2016.
  */
-public class Location extends Fragment implements OnMapReadyCallback {
+public class RandomBar extends Fragment implements OnMapReadyCallback {
 
     SupportMapFragment sMapFragment;
-    private ArrayAdapter<String> bar_spinner;
+
     private BarLocation barLocation;
     private BarName barName;
     private GoogleMap mMap;
-    private Spinner spinner;
+    private Button randomButton;
+    private TextView randomBar;
+    private Random random;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_location, container, false);
+        View v = inflater.inflate(R.layout.fragment_random, container, false);
 
-        spinner = (Spinner) v.findViewById(R.id.spinner);
+        randomBar = (TextView) v.findViewById(R.id.random_bar);
+        randomButton = (Button) v.findViewById(R.id.random_button);
+
         setupMap();
-
         return v;
     }
 
@@ -51,7 +53,6 @@ public class Location extends Fragment implements OnMapReadyCallback {
         android.support.v4.app.FragmentManager sFm = getFragmentManager();
         sMapFragment = SupportMapFragment.newInstance();
         sMapFragment.getMapAsync(this);
-
         if (sMapFragment == null) {
             sFm.beginTransaction().replace(R.id.map, sMapFragment).commit();
         } else {
@@ -64,8 +65,7 @@ public class Location extends Fragment implements OnMapReadyCallback {
         mMap = googleMap;
         setupCamera();
         setupUiSettings();
-        setupBar();
-        initSpinner();
+        setupRandomButton();
     }
 
     private void setupCamera() {
@@ -84,30 +84,18 @@ public class Location extends Fragment implements OnMapReadyCallback {
         }
     }
 
-    private void setupBar() {
-        for (int i = 0; i < location().size(); i++) {
-            mMap.addMarker(new MarkerOptions().position(location().get(i)).title(name().get(i)));
-        }
-    }
-
-    public void initSpinner() {
-        bar_spinner = new ArrayAdapter<>(this.getActivity(),
-                android.R.layout.simple_dropdown_item_1line, name());
-        spinner.setAdapter(bar_spinner);
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
+    private void setupRandomButton() {
+        randomButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                setupBar();
-                int selectedBar = position;
-                mMap.addMarker(new MarkerOptions().position(location().get(selectedBar)).title(name()
-                        .get(selectedBar)).icon(BitmapDescriptorFactory.
-                        defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
-                mMap.moveCamera(CameraUpdateFactory.newLatLng(location().get(selectedBar)));
-                mMap.moveCamera(CameraUpdateFactory.zoomTo(16));
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
+            public void onClick(View v) {
+                random = new Random();
+                int randomBarPos = random.nextInt(32);
+                String i = name().get(randomBarPos);
+                randomBar.setText(i);
+
+                mMap.addMarker(new MarkerOptions().position(location().get(randomBarPos)).title(name().get(randomBarPos)));
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(location().get(randomBarPos)));
+                mMap.moveCamera(CameraUpdateFactory.zoomTo(17));
             }
         });
     }
@@ -120,7 +108,7 @@ public class Location extends Fragment implements OnMapReadyCallback {
 
     private ArrayList<LatLng> location() {
         barLocation = new BarLocation();
-        ArrayList<LatLng> loc = barLocation.getLocation();
-        return loc;
+        ArrayList<LatLng> location = barLocation.getLocation();
+        return location;
     }
 }

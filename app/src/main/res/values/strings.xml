@@ -7,7 +7,7 @@
     <string name="subtitle">Subtitle</string>
     <string name="title">Title</string>
 
-    <string name="add_item_button_confirm">Add</string>
+    <string name="add_favorite">+</string>
 
     //bars in regensburg
     <string name="relax">Vor sich hin vegitieren</string>
@@ -165,5 +165,7 @@
     <string name="ab22">22</string>
     <string name="ab23">23</string>
     <string name="ab00">00</string>
+    <string name="random_button">RANDOM BUTTON</string>
+    <string name="n_chste_bar">Nächste Bar:</string>
 
 </resources>

@@ -55,10 +55,12 @@
 
     <Button
         android:id="@+id/fav_add_button"
+        android:textAlignment="center"
         android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_height="40dp"
         android:layout_margin="5dp"
-        android:layout_weight="0.2"
-        android:background="@color/grey"
-        android:text="@string/add_item_button_confirm" />
+        android:layout_weight="0.1"
+        android:background="#F3CE00"
+        android:textSize="24sp"
+        android:text="@string/add_favorite"/>
 </LinearLayout>

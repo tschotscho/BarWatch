@@ -9,11 +9,13 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.hannes.barwatch.R;
 
 import java.util.ArrayList;
 
+import com.example.hannes.barwatch.activities.MainActivity;
 import com.example.hannes.barwatch.adapter.BarAdapter;
 import com.example.hannes.barwatch.database.BarDatabase;
 import com.example.hannes.barwatch.item.BarItem;
@@ -51,6 +53,7 @@ public class Daily extends Fragment {
         list = (ListView) v.findViewById(R.id.daily_list);
 
         TextView week = (TextView) v.findViewById(R.id.weekday);
+
         week.setText("Täglich");
 
         initDB();

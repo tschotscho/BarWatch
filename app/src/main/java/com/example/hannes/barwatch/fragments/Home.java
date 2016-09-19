@@ -34,7 +34,6 @@ public class Home extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
         v = inflater.inflate(R.layout.fragment_home, container, false);
 
         initViewPager();
@@ -42,7 +41,7 @@ public class Home extends Fragment {
         return v;
     }
 
-    public void initViewPager(){
+    public void initViewPager() {
         viewpager = (ViewPager) v.findViewById(R.id.view_pager);
 
         listWeek = new ArrayList<Fragment>();

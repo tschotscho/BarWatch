@@ -1,5 +1,6 @@
 package com.example.hannes.barwatch.database;
 
+
 import com.google.android.gms.maps.model.LatLng;
 
 import java.util.ArrayList;

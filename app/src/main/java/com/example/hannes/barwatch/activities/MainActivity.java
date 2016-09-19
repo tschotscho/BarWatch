@@ -18,6 +18,7 @@ import java.util.List;
 
 import com.example.hannes.barwatch.fragments.Favourite;
 import com.example.hannes.barwatch.fragments.Location;
+import com.example.hannes.barwatch.fragments.RandomBar;
 import com.example.hannes.barwatch.item.NavItem;
 import com.example.hannes.barwatch.R;
 import com.example.hannes.barwatch.adapter.NavListAdapter;
@@ -25,14 +26,12 @@ import com.example.hannes.barwatch.fragments.Home;
 
 public class MainActivity extends AppCompatActivity {
 
-    DrawerLayout drawerLayout;
-    RelativeLayout drawerPane;
-    ListView lvNav;
-
-    List<NavItem> listNavItems;
-    List<Fragment> listFragments;
-
-    ActionBarDrawerToggle actionBarDrawerToggle;
+    private DrawerLayout drawerLayout;
+    private RelativeLayout drawerPane;
+    private ListView lvNav;
+    private List<NavItem> listNavItems;
+    private List<Fragment> listFragments;
+    private ActionBarDrawerToggle actionBarDrawerToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,90 +44,92 @@ public class MainActivity extends AppCompatActivity {
         drawerPane = (RelativeLayout) findViewById(R.id.drawer_pane);
         lvNav = (ListView) findViewById(R.id.nav_list);
 
+        initListNavItems();
+        initNavAdapter();
+        initListFragments();
+        initDefaultFragment();
+        initNavListener();
+        initDrawerListener();
+    }
+
+    private void initNavAdapter() {
+        NavListAdapter navListAdapter = new NavListAdapter(getApplicationContext(),
+                R.layout.item_nav_list, listNavItems);
+        lvNav.setAdapter(navListAdapter);
+    }
+
+    private void initListNavItems() {
         listNavItems = new ArrayList<NavItem>();
         listNavItems.add(new NavItem("Die besten Angebote", "Happy Hour", R.drawable.beer_icon));
         listNavItems.add(new NavItem("Nutze die Karte", "Location", R.drawable.ic_location));
-        listNavItems.add(new NavItem("Deine Best of", "Favourite", R.drawable.ic_stern));
+        listNavItems.add(new NavItem("Lass das Zufall entscheiden", "Random Button", R.drawable.ic_cubes));
+        listNavItems.add(new NavItem("Deine Best of", "Favoriten", R.drawable.ic_stern));
+    }
 
-        NavListAdapter navListAdapter = new NavListAdapter(getApplicationContext(),
-                R.layout.item_nav_list, listNavItems);
-
-        lvNav.setAdapter(navListAdapter);
-
+    private void initListFragments() {
         listFragments = new ArrayList<Fragment>();
         listFragments.add(new Home());
         listFragments.add(new Location());
+        listFragments.add(new RandomBar());
         listFragments.add(new Favourite());
+    }
 
-        //load first fragment as default:
+    private void initDefaultFragment() {
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.main_content, listFragments.get(0)).commit();
-
         setTitle(listNavItems.get(0).getTitle());
         lvNav.setItemChecked(0, true);
         drawerLayout.closeDrawer(drawerPane);
+    }
 
-        //set listener for navigation items:
+    private void initNavListener() {
         lvNav.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                //replace the fragment with the selection correspondingly
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 fragmentManager.beginTransaction().replace(R.id.main_content, listFragments.get(position)).commit();
 
                 setTitle(listNavItems.get(position).getTitle());
                 lvNav.setItemChecked(position, true);
                 drawerLayout.closeDrawer(drawerPane);
-
             }
         });
+    }
 
-
-        //create listener for drawer layout
+    private void initDrawerListener() {
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout,
                 R.string.drawer_closed, R.string.drawer_closed) {
             @Override
             public void onDrawerOpened(View drawerView) {
                 invalidateOptionsMenu();
                 super.onDrawerOpened(drawerView);
-
             }
-
-            ;
 
             @Override
             public void onDrawerClosed(View drawerView) {
                 invalidateOptionsMenu();
                 super.onDrawerClosed(drawerView);
-
             }
-
-            ;
         };
-
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
-
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu){
-
+    public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item){
-
-        if(actionBarDrawerToggle.onOptionsItemSelected(item))
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (actionBarDrawerToggle.onOptionsItemSelected(item))
             return true;
 
         return super.onOptionsItemSelected(item);
     }
 
     @Override
-    protected void onPostCreate(Bundle savedInstanceState){
+    protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
         actionBarDrawerToggle.syncState();
     }

@@ -15,7 +15,7 @@ import java.util.ArrayList;
 /**
  * Created by Robin on 01.09.16.
  */
-public class BarAdapter extends ArrayAdapter<BarItem> {
+public class  BarAdapter extends ArrayAdapter<BarItem> {
     private ArrayList<BarItem> barList;
     private Context context;
 
