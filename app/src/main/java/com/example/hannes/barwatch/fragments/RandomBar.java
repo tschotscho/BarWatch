@@ -88,6 +88,7 @@ public class RandomBar extends Fragment implements OnMapReadyCallback {
         randomButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mMap.clear();
                 random = new Random();
                 int randomBarPos = random.nextInt(32);
                 String i = name().get(randomBarPos);
