@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,11 +26,12 @@ import com.example.hannes.barwatch.item.BarItem;
  */
 public class Daily extends Fragment {
 
-    ListView list;
+    private ListView list;
+   // Button add;
 
     private ArrayList<BarItem> bars = new ArrayList<BarItem>();
     private BarAdapter bar_adapter;
-    private BarDatabase bar_db;
+    //private BarDatabase bar_db;
 
 
     // Tägliche Angebote
@@ -51,19 +53,31 @@ public class Daily extends Fragment {
         View v = inflater.inflate(R.layout.daily_layout, container, false);
 
         list = (ListView) v.findViewById(R.id.daily_list);
+        //add = (Button) v.findViewById(R.id.fav_add_button);
 
         TextView week = (TextView) v.findViewById(R.id.weekday);
 
         week.setText("Täglich");
 
-        initDB();
+       // initDB();
         initUI();
-        updateList();
+        //updateList();
         initDaily();
+       // initButton();
 
 
         return v;
     }
+
+    /*private void initButton() {
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+    }*/
 
     private void initDaily() {
 
@@ -90,19 +104,20 @@ public class Daily extends Fragment {
 
     }
 
-    private void updateList() {
+    /*private void updateList() {
         bars.clear();
-        bars.addAll(bar_db.getAllToDoItems());
+        //bars.addAll(bar_db.getAllToDoItems());
         bar_adapter.notifyDataSetChanged();
     }
+
 
     private void initDB() {
         bar_db = new BarDatabase(this.getActivity());
         bar_db.open();
     }
+    */
 
     private void initUI() {
-        initTaskButton();
         initListView();
         initFavAdapter();
     }
@@ -112,8 +127,7 @@ public class Daily extends Fragment {
         list.setAdapter(bar_adapter);
     }
 
-    private void initTaskButton() {
-    }
+
 
     private void initListView() {
         list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {

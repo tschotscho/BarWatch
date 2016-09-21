@@ -1,5 +1,7 @@
 package com.example.hannes.barwatch.item;
 
+import android.widget.Button;
+
 /**
  * Created by Robin on 28.08.16.
  */
@@ -21,7 +23,10 @@ public class BarItem {
         //this.oeffnungszeiten = oeffnungszeiten;
        // this.lat = lat;
        // this.lng = lng;
+
     }
+
+
 
     public String getTime(){return time;}
 

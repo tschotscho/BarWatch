@@ -25,7 +25,7 @@ public class Wednesday extends Fragment {
 
     private ArrayList<BarItem> bars = new ArrayList<BarItem>();
     private BarAdapter bar_adapter;
-    private BarDatabase bar_db;
+    //private BarDatabase bar_db;
 
     private BarItem hem;
     private BarItem ubar;
@@ -49,9 +49,9 @@ public class Wednesday extends Fragment {
         week.setText("Mittwoch");
 
 
-        initDB();
+        //initDB();
         initUI();
-        updateList();
+        //updateList();
         initWednesday();
 
         return v;
@@ -86,7 +86,7 @@ public class Wednesday extends Fragment {
     }
 
 
-    private void updateList() {
+    /*private void updateList() {
         bars.clear();
         bars.addAll(bar_db.getAllToDoItems());
         bar_adapter.notifyDataSetChanged();
@@ -95,7 +95,7 @@ public class Wednesday extends Fragment {
     private void initDB() {
         bar_db = new BarDatabase(this.getActivity());
         bar_db.open();
-    }
+    }*/
 
     private void initUI() {
         initTaskButton();

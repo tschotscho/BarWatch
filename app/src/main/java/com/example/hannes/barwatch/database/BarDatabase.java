@@ -16,11 +16,11 @@ import java.util.ArrayList;
  */
 
 
-// SQlite Abfragen korrekt?
+
 
 public class BarDatabase {
     private static final String DATABASE_NAME = "favoriten.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     public static final String KEY_ID = "_id";
     public static final String KEY_TIME = "time";
@@ -31,33 +31,31 @@ public class BarDatabase {
 
     private static final String DATABASE_TABLE = "favoriten";
 
-    private static final int COLUMN_TIME_INDEX = 1;
+    private static final int COLUMN_TIME_INDEX=2;
     private static final int COLUMN_FAV_INDEX = 1;
-    private static final int COLUMN_ANGEBOT_INDEX = 2;
+    private static final int COLUMN_ANGEBOT_INDEX = 3;
 
 
     private ToDoDBOpenHelper dbHelper;
 
     private SQLiteDatabase db;
 
-    public BarDatabase(Context context) {
+    public BarDatabase(Context context){
         dbHelper = new ToDoDBOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
 
-    public void open() throws SQLException {
+    public void open() throws SQLException{
         try {
             db = dbHelper.getWritableDatabase();
-        } catch (SQLException e) {
+        }catch (SQLException e){
             db = dbHelper.getReadableDatabase();
         }
     }
 
-    public void close() {
-        db.close();
-    }
+    public void close() { db.close();}
 
-    public long insertFavorit(BarItem fav) {
+    public long insertFavorite(BarItem fav){
         ContentValues newFavValues = new ContentValues();
 
         newFavValues.put(KEY_TIME, fav.getTime());
@@ -67,42 +65,42 @@ public class BarDatabase {
         return db.insert(DATABASE_TABLE, null, newFavValues);
     }
 
-    public void removeFavItem(BarItem fav) {
+    /*public void removeFavItem(BarItem fav){
         String whereClause = KEY_NAME + " = '" + fav.getName() + "'";
 
         db.delete(DATABASE_TABLE, whereClause, null);
-    }
+    }*/
 
-    public ArrayList<BarItem> getAllToDoItems() {
+    public ArrayList<BarItem> getAllToDoItems(){
         ArrayList<BarItem> favoriten = new ArrayList<BarItem>();
-        Cursor cursor = db.query(DATABASE_TABLE, new String[]{KEY_ID, KEY_NAME}, null, null, null, null, null);
-        if (cursor.moveToFirst()) {
-            do {
+        String[] allColumns = new String[] {KEY_ID, KEY_NAME, KEY_TIME, KEY_ANGEBOT};
+        Cursor cursor = db.query(DATABASE_TABLE, allColumns, null, null, null, null, null);
+        if(cursor.moveToFirst()){
+            do{
                 String time = cursor.getString(COLUMN_TIME_INDEX);
                 String fav = cursor.getString(COLUMN_FAV_INDEX);
                 String angebot = cursor.getString(COLUMN_ANGEBOT_INDEX);
                 favoriten.add(new BarItem(time, fav, angebot));
 
             }
-            while (cursor.moveToNext());
+            while(cursor.moveToNext());
         }
         return favoriten;
     }
 
 
-    private class ToDoDBOpenHelper extends SQLiteOpenHelper {
+    private class ToDoDBOpenHelper extends SQLiteOpenHelper{
 
         private static final String DATABASE_CREATE = "create table "
                 + DATABASE_TABLE + " (" + KEY_ID
-                + " integer primary key autoincrement, " + KEY_NAME
-                + " text not null, text);";
+                + " integer primary key autoincrement, " + KEY_NAME + " text not null, " + KEY_TIME
+                + " text not null, " + KEY_ANGEBOT + " text not null);";
 
 
         public ToDoDBOpenHelper(Context context, String databaseName, SQLiteDatabase.CursorFactory factory, int databaseVersion) {
             super(context, databaseName, factory, databaseVersion);
 
         }
-
         public void onCreate(SQLiteDatabase db) {
             db.execSQL(DATABASE_CREATE);
         }

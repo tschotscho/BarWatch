@@ -16,6 +16,7 @@ import android.widget.RelativeLayout;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.example.hannes.barwatch.database.BarDatabase;
 import com.example.hannes.barwatch.fragments.Favourite;
 import com.example.hannes.barwatch.fragments.Location;
 import com.example.hannes.barwatch.fragments.RandomBar;
@@ -33,12 +34,17 @@ public class MainActivity extends AppCompatActivity {
     private List<Fragment> listFragments;
     private ActionBarDrawerToggle actionBarDrawerToggle;
 
+    BarDatabase db;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        db = new BarDatabase(this);
 
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawerPane = (RelativeLayout) findViewById(R.id.drawer_pane);
@@ -62,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         listNavItems = new ArrayList<NavItem>();
         listNavItems.add(new NavItem("Die besten Angebote", "Happy Hour", R.drawable.beer_icon));
         listNavItems.add(new NavItem("Nutze die Karte", "Location", R.drawable.ic_location));
-        listNavItems.add(new NavItem("Lass das Zufall entscheiden", "Random Button", R.drawable.ic_cubes));
+        listNavItems.add(new NavItem("Lass das Zufall entscheiden", "Random Button", R.drawable.ic_stern));
         listNavItems.add(new NavItem("Deine Best of", "Favoriten", R.drawable.ic_stern));
     }
 
@@ -132,5 +138,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
         actionBarDrawerToggle.syncState();
+    }
+
+    @Override
+    protected void onDestroy(){
+        db.close();
+        super.onDestroy();
     }
 }

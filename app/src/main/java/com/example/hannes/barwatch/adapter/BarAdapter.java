@@ -5,9 +5,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.hannes.barwatch.R;
+import com.example.hannes.barwatch.database.BarDatabase;
 import com.example.hannes.barwatch.item.BarItem;
 
 import java.util.ArrayList;
@@ -17,17 +20,23 @@ import java.util.ArrayList;
  */
 public class  BarAdapter extends ArrayAdapter<BarItem> {
     private ArrayList<BarItem> barList;
+    private ArrayList<String> names_fav;
     private Context context;
+    private BarDatabase db;
 
     public BarAdapter(Context context, ArrayList<BarItem> listItems){
         super(context, R.layout.listitem_barlist, listItems);
 
         this.context = context;
         this.barList = listItems;
+
+        db = new BarDatabase(context);
+        db.open();
+
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent){
+    public View getView(final int position, View convertView, ViewGroup parent){
 
         View v = convertView;
 
@@ -37,7 +46,7 @@ public class  BarAdapter extends ArrayAdapter<BarItem> {
 
         }
 
-        BarItem bar = barList.get(position);
+        final BarItem bar = barList.get(position);
 
         if (bar != null){
             TextView barTime = (TextView) v.findViewById(R.id.bar_time);
@@ -48,10 +57,41 @@ public class  BarAdapter extends ArrayAdapter<BarItem> {
 
             TextView angebot = (TextView) v.findViewById(R.id.angebot_name);
             angebot.setText(bar.getAngebote());
+
+
+            Button add = (Button) v.findViewById(R.id.fav_add_button);
+            add.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    CharSequence text = bar.getName();
+
+                    int duration = Toast.LENGTH_SHORT;
+                    Toast toast = Toast.makeText(context, text, duration);
+                    toast.show();
+
+
+                    if (names_fav.contains(bar.getName())){
+
+                    }else{
+                        names_fav.add(bar.getName());
+                        db.insertFavorite(bar);
+                    }
+                    
+
+
+
+                }
+            });
         }
+
+
+
         return v;
     }
 
+    public ArrayList<BarItem> getFavorites () {
 
+        return db.getAllToDoItems();
+    }
 
 }
