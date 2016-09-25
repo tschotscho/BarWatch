@@ -17,8 +17,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.example.hannes.barwatch.database.BarDatabase;
-import com.example.hannes.barwatch.fragments.Favourite;
-import com.example.hannes.barwatch.fragments.Location;
+import com.example.hannes.barwatch.fragments.Favorite;
+import com.example.hannes.barwatch.fragments.MapFragment;
 import com.example.hannes.barwatch.fragments.RandomBar;
 import com.example.hannes.barwatch.item.NavItem;
 import com.example.hannes.barwatch.R;
@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         db = new BarDatabase(this);
+        db.open();
 
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawerPane = (RelativeLayout) findViewById(R.id.drawer_pane);
@@ -66,18 +67,18 @@ public class MainActivity extends AppCompatActivity {
 
     private void initListNavItems() {
         listNavItems = new ArrayList<NavItem>();
-        listNavItems.add(new NavItem("Die besten Angebote", "Happy Hour", R.drawable.beer_icon));
-        listNavItems.add(new NavItem("Nutze die Karte", "Location", R.drawable.ic_location));
-        listNavItems.add(new NavItem("Lass das Zufall entscheiden", "Random Button", R.drawable.ic_stern));
+        listNavItems.add(new NavItem("Die besten Angebote", "Happy Hour", R.drawable.ic_beer));
+        listNavItems.add(new NavItem("Nutze die Karte", "MapFragment", R.drawable.ic_location));
+        listNavItems.add(new NavItem("Lass das Zufall entscheiden", "Random Button", R.drawable.ic_cubes));
         listNavItems.add(new NavItem("Deine Best of", "Favoriten", R.drawable.ic_stern));
     }
 
     private void initListFragments() {
         listFragments = new ArrayList<Fragment>();
         listFragments.add(new Home());
-        listFragments.add(new Location());
+        listFragments.add(new MapFragment());
         listFragments.add(new RandomBar());
-        listFragments.add(new Favourite());
+        listFragments.add(new Favorite());
     }
 
     private void initDefaultFragment() {
@@ -141,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onDestroy(){
+    protected void onDestroy() {
         db.close();
         super.onDestroy();
     }

@@ -15,7 +15,6 @@ import com.example.hannes.barwatch.R;
 import java.util.ArrayList;
 
 import com.example.hannes.barwatch.adapter.BarAdapter;
-import com.example.hannes.barwatch.database.BarDatabase;
 import com.example.hannes.barwatch.item.BarItem;
 
 /**
@@ -23,11 +22,10 @@ import com.example.hannes.barwatch.item.BarItem;
  */
 public class Monday extends Fragment {
 
-    ListView list;
+    private ListView list;
 
     private ArrayList<BarItem> bars = new ArrayList<BarItem>();
     private BarAdapter bar_adapter;
-    //private BarDatabase bar_db;
 
     // Montags Angebote
     private BarItem altefilm;
@@ -44,16 +42,14 @@ public class Monday extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.daily_layout, container, false);
+        View v = inflater.inflate(R.layout.offer_layout, container, false);
 
         list = (ListView) v.findViewById(R.id.daily_list);
 
         TextView week = (TextView) v.findViewById(R.id.weekday);
         week.setText("Montag");
 
-        //initDB();
         initUI();
-        //updateList();
         initMonday();
 
 
@@ -62,14 +58,14 @@ public class Monday extends Fragment {
 
     private void initMonday() {
 
-        altefilm = new BarItem(getString(R.string.ab20), getString(R.string.alteFilm), getString(R.string.altefilm_mo));
-        banane = new BarItem(getString(R.string.ab19), getString(R.string.banane), getString(R.string.banane_mo));
-        heimat = new BarItem(getString(R.string.ab19), getString(R.string.heimat), getString(R.string.heimat_mo));
-        pirat = new BarItem(getString(R.string.ab19), getString(R.string.piratenhöhle), getString(R.string.pirat_mo));
-        no7 = new BarItem(getString(R.string.ab20), getString(R.string.no7), getString(R.string.no7_mo));
-        picasso = new BarItem(getString(R.string.ab20), getString(R.string.picasso), getString(R.string.pirat_mo));
-        bar13 = new BarItem(getString(R.string.ab20), getString(R.string.bar13), getString(R.string.bar13_mo));
-        max = new BarItem(getString(R.string.ab20), getString(R.string.max), getString(R.string.max_mo));
+        altefilm = new BarItem(getString(R.string.ab20), getString(R.string.alteFilm), getString(R.string.altefilm_mo), getString(R.string.day_mo));
+        banane = new BarItem(getString(R.string.ab19), getString(R.string.banane), getString(R.string.banane_mo), getString(R.string.day_mo));
+        heimat = new BarItem(getString(R.string.ab19), getString(R.string.heimat), getString(R.string.heimat_mo), getString(R.string.day_mo));
+        pirat = new BarItem(getString(R.string.ab19), getString(R.string.piratenhöhle), getString(R.string.pirat_mo), getString(R.string.day_mo));
+        no7 = new BarItem(getString(R.string.ab20), getString(R.string.no7), getString(R.string.no7_mo), getString(R.string.day_mo));
+        picasso = new BarItem(getString(R.string.ab20), getString(R.string.picasso), getString(R.string.pirat_mo), getString(R.string.day_mo));
+        bar13 = new BarItem(getString(R.string.ab20), getString(R.string.bar13), getString(R.string.bar13_mo), getString(R.string.day_mo));
+        max = new BarItem(getString(R.string.ab20), getString(R.string.max), getString(R.string.max_mo), getString(R.string.day_mo));
 
         bars.add(banane);
         bars.add(heimat);
@@ -81,16 +77,6 @@ public class Monday extends Fragment {
         bars.add(max);
 
     }
-    /*private void updateList() {
-        bars.clear();
-        bars.addAll(bar_db.getAllToDoItems());
-        bar_adapter.notifyDataSetChanged();
-    }
-
-    private void initDB() {
-        bar_db = new BarDatabase(this.getActivity());
-        bar_db.open();
-    }*/
 
     private void initUI() {
         initTaskButton();

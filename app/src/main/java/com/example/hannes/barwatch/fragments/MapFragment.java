@@ -28,7 +28,7 @@ import java.util.ArrayList;
 /**
  * Created by Christopher on 18.08.2016.
  */
-public class Location extends Fragment implements OnMapReadyCallback {
+public class MapFragment extends Fragment implements OnMapReadyCallback {
 
     SupportMapFragment sMapFragment;
     private ArrayAdapter<String> bar_spinner;
@@ -39,7 +39,7 @@ public class Location extends Fragment implements OnMapReadyCallback {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_location, container, false);
+        View v = inflater.inflate(R.layout.map_layout, container, false);
 
         spinner = (Spinner) v.findViewById(R.id.spinner);
         setupMap();
@@ -106,6 +106,7 @@ public class Location extends Fragment implements OnMapReadyCallback {
                 mMap.moveCamera(CameraUpdateFactory.newLatLng(location().get(selectedBar)));
                 mMap.moveCamera(CameraUpdateFactory.zoomTo(16));
             }
+
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
             }

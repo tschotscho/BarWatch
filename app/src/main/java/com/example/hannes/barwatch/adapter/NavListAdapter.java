@@ -20,6 +20,7 @@ public class NavListAdapter extends ArrayAdapter<NavItem> {
     Context context;
     int resLayout;
     List<NavItem> listNavItems;
+
     public NavListAdapter(Context context, int resLayout, List<NavItem> listNavItems) {
         super(context, resLayout, listNavItems);
 

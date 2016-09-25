@@ -9,6 +9,16 @@
 
     <string name="add_favorite">+</string>
 
+    //Wochentage
+    <string name="day_da">Täglich</string>
+    <string name="day_mo">Montag</string>
+    <string name="day_tu">Dienstag</string>
+    <string name="day_we">Mittwoch</string>
+    <string name="day_th">Donnerstag</string>
+    <string name="day_fr">Freitag</string>
+    <string name="day_sa">Samstag</string>
+    <string name="day_su">Sonntag</string>
+
     //bars in regensburg
     <string name="relax">Vor sich hin vegitieren</string>
     <string name="kasper">Ka5per</string>

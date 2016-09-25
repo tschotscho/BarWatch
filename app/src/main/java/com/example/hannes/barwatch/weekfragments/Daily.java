@@ -7,18 +7,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.hannes.barwatch.R;
 
 import java.util.ArrayList;
 
-import com.example.hannes.barwatch.activities.MainActivity;
 import com.example.hannes.barwatch.adapter.BarAdapter;
-import com.example.hannes.barwatch.database.BarDatabase;
 import com.example.hannes.barwatch.item.BarItem;
 
 /**
@@ -27,7 +23,7 @@ import com.example.hannes.barwatch.item.BarItem;
 public class Daily extends Fragment {
 
     private ListView list;
-   // Button add;
+    // Button add;
 
     private ArrayList<BarItem> bars = new ArrayList<BarItem>();
     private BarAdapter bar_adapter;
@@ -50,7 +46,7 @@ public class Daily extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.daily_layout, container, false);
+        View v = inflater.inflate(R.layout.offer_layout, container, false);
 
         list = (ListView) v.findViewById(R.id.daily_list);
         //add = (Button) v.findViewById(R.id.fav_add_button);
@@ -59,11 +55,11 @@ public class Daily extends Fragment {
 
         week.setText("Täglich");
 
-       // initDB();
+        // initDB();
         initUI();
         //updateList();
         initDaily();
-       // initButton();
+        // initButton();
 
 
         return v;
@@ -81,15 +77,15 @@ public class Daily extends Fragment {
 
     private void initDaily() {
 
-        margaritas = new BarItem(getString(R.string.ab17), getString(R.string.margaritas), getString(R.string.margaritas_d));
-        hemmingways= new BarItem(getString(R.string.ab19), getString(R.string.hemmingways), getString(R.string.hem_d));
-        kasper = new BarItem(getString(R.string.ab20), getString(R.string.kasper), getString(R.string.kasper_d));
-        jagd = new BarItem(getString(R.string.ab20), getString(R.string.jagd), getString(R.string.jagd_d));
-        ubar = new BarItem(getString(R.string.ab21), getString(R.string.ubar), getString(R.string.ubar_d));
-        barock = new BarItem(getString(R.string.ab20), getString(R.string.barock), getString(R.string.barock_d));
-        franky = new BarItem(getString(R.string.ab20), getString(R.string.frankys), getString(R.string.franky_d));
-        orange = new BarItem(getString(R.string.ab20), getString(R.string.orange), getString(R.string.orange_d));
-        no7 = new BarItem(getString(R.string.ab20), getString(R.string.no7), getString(R.string.no7_d));
+        margaritas = new BarItem(getString(R.string.ab17), getString(R.string.margaritas), getString(R.string.margaritas_d), getString(R.string.day_da));
+        hemmingways = new BarItem(getString(R.string.ab19), getString(R.string.hemmingways), getString(R.string.hem_d), getString(R.string.day_da));
+        kasper = new BarItem(getString(R.string.ab20), getString(R.string.kasper), getString(R.string.kasper_d), getString(R.string.day_da));
+        jagd = new BarItem(getString(R.string.ab20), getString(R.string.jagd), getString(R.string.jagd_d), getString(R.string.day_da));
+        ubar = new BarItem(getString(R.string.ab21), getString(R.string.ubar), getString(R.string.ubar_d), getString(R.string.day_da));
+        barock = new BarItem(getString(R.string.ab20), getString(R.string.barock), getString(R.string.barock_d), getString(R.string.day_da));
+        franky = new BarItem(getString(R.string.ab20), getString(R.string.frankys), getString(R.string.franky_d), getString(R.string.day_da));
+        orange = new BarItem(getString(R.string.ab20), getString(R.string.orange), getString(R.string.orange_d), getString(R.string.day_da));
+        no7 = new BarItem(getString(R.string.ab20), getString(R.string.no7), getString(R.string.no7_d), getString(R.string.day_da));
 
         bars.add(margaritas);
         bars.add(hemmingways);
@@ -126,7 +122,6 @@ public class Daily extends Fragment {
         bar_adapter = new BarAdapter(this.getActivity(), bars);
         list.setAdapter(bar_adapter);
     }
-
 
 
     private void initListView() {

@@ -12,7 +12,6 @@ import android.widget.TextView;
 
 import com.example.hannes.barwatch.R;
 import com.example.hannes.barwatch.adapter.BarAdapter;
-import com.example.hannes.barwatch.database.BarDatabase;
 import com.example.hannes.barwatch.item.BarItem;
 
 import java.util.ArrayList;
@@ -22,11 +21,10 @@ import java.util.ArrayList;
  */
 public class Sunday extends Fragment {
 
-    ListView list;
+    private ListView list;
 
     private ArrayList<BarItem> bars = new ArrayList<BarItem>();
     private BarAdapter bar_adapter;
-    //private BarDatabase bar_db;
 
     private BarItem relax;
     private BarItem picasso;
@@ -36,7 +34,7 @@ public class Sunday extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.daily_layout, container, false);
+        View v = inflater.inflate(R.layout.offer_layout, container, false);
         list = (ListView) v.findViewById(R.id.daily_list);
         TextView week = (TextView) v.findViewById(R.id.weekday);
         week.setText("Sonntag");
@@ -50,28 +48,15 @@ public class Sunday extends Fragment {
     }
 
     private void initSunday() {
-
-        picasso = new BarItem(getString(R.string.ab20), getString(R.string.picasso), getString(R.string.picasso_so));
-        bar13 = new BarItem(getString(R.string.ab20), getString(R.string.bar13), getString(R.string.bar_so));
-        relax = new BarItem(getString(R.string.feierabend), getString(R.string.relax), getString(R.string.relax_so));
+        picasso = new BarItem(getString(R.string.ab20), getString(R.string.picasso), getString(R.string.picasso_so), getString(R.string.day_su));
+        bar13 = new BarItem(getString(R.string.ab20), getString(R.string.bar13), getString(R.string.bar_so), getString(R.string.day_su));
+        relax = new BarItem(getString(R.string.feierabend), getString(R.string.relax), getString(R.string.relax_so), getString(R.string.day_su));
 
         bars.add(bar13);
         bars.add(picasso);
         bars.add(relax);
 
     }
-
-
-    /*private void updateList() {
-        bars.clear();
-        bars.addAll(bar_db.getAllToDoItems());
-        bar_adapter.notifyDataSetChanged();
-    }
-
-    private void initDB() {
-        bar_db = new BarDatabase(this.getActivity());
-        bar_db.open();
-    }*/
 
     private void initUI() {
         initTaskButton();

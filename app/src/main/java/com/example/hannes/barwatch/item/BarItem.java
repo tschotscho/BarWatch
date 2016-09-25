@@ -9,26 +9,31 @@ public class BarItem {
     private String time;
     private String name;
     private String angebot;
+    private String day;
     //private String adresse;
     //private String oeffnungszeiten;
     //private float lat;
     //private float lng;
 
-    public BarItem(String time, String name, String angebot){
+    public BarItem(String time, String name, String angebot, String day) {
 
         this.time = time;
         this.name = name;
         this.angebot = angebot;
+        this.day = day;
+
+
         //this.adresse = adresse;
         //this.oeffnungszeiten = oeffnungszeiten;
-       // this.lat = lat;
-       // this.lng = lng;
+        // this.lat = lat;
+        // this.lng = lng;
 
     }
 
 
-
-    public String getTime(){return time;}
+    public String getTime() {
+        return time;
+    }
 
     public String getName() {
         return name;
@@ -38,4 +43,7 @@ public class BarItem {
         return angebot;
     }
 
+    public String getDay() {
+        return day;
+    }
 }

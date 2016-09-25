@@ -40,7 +40,7 @@ public class RandomBar extends Fragment implements OnMapReadyCallback {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_random, container, false);
+        View v = inflater.inflate(R.layout.random_bar_layout, container, false);
 
         randomBar = (TextView) v.findViewById(R.id.random_bar);
         randomButton = (Button) v.findViewById(R.id.random_button);

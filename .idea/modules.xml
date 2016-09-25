@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BarWatch.iml" filepath="$PROJECT_DIR$/BarWatch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BarWatch Kopie.iml" filepath="$PROJECT_DIR$/BarWatch Kopie.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

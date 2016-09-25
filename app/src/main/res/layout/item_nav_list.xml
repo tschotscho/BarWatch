@@ -10,7 +10,7 @@
         android:id="@+id/nav_icon"
         android:layout_width="@dimen/nav_image_width"
         android:layout_height="@dimen/nav_image_heigth"
-        android:src="@drawable/beer_icon" />
+        android:src="@drawable/ic_beer" />
 
     <LinearLayout
         android:layout_width="wrap_content"

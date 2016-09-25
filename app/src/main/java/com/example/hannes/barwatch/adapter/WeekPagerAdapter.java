@@ -13,19 +13,19 @@ public class WeekPagerAdapter extends FragmentPagerAdapter {
 
     List<Fragment> listWeek;
 
-    public WeekPagerAdapter(FragmentManager fm, List<Fragment> listWeek){
+    public WeekPagerAdapter(FragmentManager fm, List<Fragment> listWeek) {
         super(fm);
         this.listWeek = listWeek;
     }
 
     @Override
-    public Fragment getItem(int position){
+    public Fragment getItem(int position) {
 
         return listWeek.get(position);
     }
 
     @Override
-    public int getCount(){
+    public int getCount() {
 
         return listWeek.size();
     }

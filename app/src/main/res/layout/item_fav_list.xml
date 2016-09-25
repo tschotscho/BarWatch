@@ -3,8 +3,22 @@
     android:id="@+id/listitem_favitem"
     android:layout_width="match_parent"
     android:layout_height="?android:attr/listPreferredItemHeight"
-    android:orientation="horizontal">
+    android:orientation="vertical">
 
+    <TextView
+        android:id="@+id/fav_day"
+        android:textSize="16sp"
+        android:background="@color/material_blue_grey_800"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:text="DD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
     <TextView
         android:layout_width="15dp"
@@ -14,7 +28,7 @@
         android:textSize="10sp" />
 
     <TextView
-        android:id="@+id/bar_time"
+        android:id="@+id/fav_time"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginRight="5dp"
@@ -28,12 +42,13 @@
         android:layout_weight="0.6">
 
         <LinearLayout
+            android:id="@+id/overview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/bar_name"
+                android:id="@+id/fav_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.6"
@@ -42,7 +57,7 @@
                 android:textSize="25sp" />
 
             <TextView
-                android:id="@+id/angebot_name"
+                android:id="@+id/fav_angebot"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
@@ -53,14 +68,14 @@
 
     </RelativeLayout>
 
-    <Button
-        android:id="@+id/fav_add_button"
-        android:textAlignment="center"
+    <ImageView
+        android:id="@+id/detail_view"
+        android:src="@drawable/ic_info"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_margin="5dp"
         android:layout_weight="0.1"
-        android:background="#F3CE00"
-        android:textSize="24sp"
-        android:text="@string/add_favorite"/>
+        android:textSize="24sp" />
+
+    </LinearLayout>
 </LinearLayout>
