@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/detail_bar_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/material_blue_grey_800"
+        android:text="Barname"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="36sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:text="Öffnungszeiten:"
+        android:textColor="#444"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/open"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:text="Adresse:"
+        android:textColor="#444"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/adress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <FrameLayout
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true" />
+
+
+</LinearLayout>

@@ -1,5 +1,7 @@
 package com.example.hannes.barwatch.weekfragments;
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -76,7 +78,6 @@ public class Daily extends Fragment {
     }*/
 
     private void initDaily() {
-
         margaritas = new BarItem(getString(R.string.ab17), getString(R.string.margaritas), getString(R.string.margaritas_d), getString(R.string.day_da));
         hemmingways = new BarItem(getString(R.string.ab19), getString(R.string.hemmingways), getString(R.string.hem_d), getString(R.string.day_da));
         kasper = new BarItem(getString(R.string.ab20), getString(R.string.kasper), getString(R.string.kasper_d), getString(R.string.day_da));
@@ -96,17 +97,12 @@ public class Daily extends Fragment {
         bars.add(orange);
         bars.add(no7);
         bars.add(ubar);
-
-
     }
 
-    /*private void updateList() {
-        bars.clear();
-        //bars.addAll(bar_db.getAllToDoItems());
-        bar_adapter.notifyDataSetChanged();
+    private void updateList() {
     }
 
-
+/*
     private void initDB() {
         bar_db = new BarDatabase(this.getActivity());
         bar_db.open();

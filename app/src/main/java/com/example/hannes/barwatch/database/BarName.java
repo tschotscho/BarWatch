@@ -37,7 +37,7 @@ public class BarName {
         name.add("Jalapenos");
         name.add("Ka5per");
         name.add("Margaritas");
-        name.add("Maxbar");
+        name.add("Max´s Bar");
         name.add("Mood");
         name.add("No. Seven");
         name.add("Orange Bar");
@@ -47,14 +47,15 @@ public class BarName {
         name.add("Rauschgold");
         name.add("Sax");
         name.add("Skala");
-        name.add("Suite");
+        name.add("Suite 15");
         name.add("U-Bar");
         name.add("Upper");
         name.add("Zarap Zap Zap");
+
+        name.indexOf("Margaritas");
     }
 
     public ArrayList<String> getName() {
         return name;
     }
-
 }

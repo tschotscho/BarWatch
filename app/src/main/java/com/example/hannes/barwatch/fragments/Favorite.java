@@ -39,6 +39,7 @@ public class Favorite extends Fragment {
         initUI(v);
         initFavList();
 
+
         return v;
     }
 
@@ -97,4 +98,5 @@ public class Favorite extends Fragment {
         db.close();
         super.onDestroy();
     }
+
 }

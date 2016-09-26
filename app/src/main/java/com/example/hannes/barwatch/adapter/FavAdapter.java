@@ -1,6 +1,7 @@
 package com.example.hannes.barwatch.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +13,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hannes.barwatch.R;
+import com.example.hannes.barwatch.activities.DetailActivity;
 import com.example.hannes.barwatch.database.BarDatabase;
+import com.example.hannes.barwatch.fragments.Favorite;
 import com.example.hannes.barwatch.item.BarItem;
 
 import java.util.ArrayList;
@@ -73,6 +76,10 @@ public class FavAdapter extends ArrayAdapter<BarItem> {
                     CharSequence text = bar.getName() + " Detailansicht";
                     Toast toast = Toast.makeText(context, text, duration);
                     toast.show();
+
+                    Intent intent = new Intent(getContext(), DetailActivity.class);
+                    intent.putExtra("Barname", bar.getName());
+                    context.startActivity(intent);
                 }
             });
 
@@ -81,7 +88,5 @@ public class FavAdapter extends ArrayAdapter<BarItem> {
 
         return v;
     }
-
-
 }
 
